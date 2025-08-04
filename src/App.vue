@@ -52,22 +52,86 @@
           :delay="300">Fill in the forms to apply
         </h2>
       </section>
+
+      <section class="py-20 relative">
+        <!-- Left image -->
+        <div class="absolute -top-20 left-0 w-[200px] h-[700px]">
+          <img class="w-full h-full object-cover" src="/images/socrates.png">
+        </div>
+        <!-- Left image -->
+        <div class="absolute -top-20 right-0 w-[200px] h-[700px]">
+          <img class="w-full h-full object-cover scale-x-[-1]" src="/images/socrates.png">
+        </div>
+        <div class="container mx-auto">
+          <h2 class="text-[56px] font-sans font-medium text-center leading-tight mb-10" v-motion-slide-visible-once-left
+            :delay="300">What to Expect on Your Discovery Call
+          </h2>
+
+          <div class="grid grid-cols-2 gap-2 pt-10">
+            <SimpleCart v-for="(item, index) in simpleCarts" :key="index" :data="item" />
+          </div>
+          <div class="flex items-center justify-center pt-10">
+            <Button name="Apply now" />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 relative">
+        <!-- Left image -->
+        <div class="absolute left-0 w-[100px] h-[200px]">
+          <img class="w-full h-full object-cover" src="/images/mask.png">
+        </div>
+        <!-- Left image -->
+        <div class="absolute right-0 w-[100px] h-[200px]">
+          <img class="w-full h-full object-cover scale-x-[-1]" src="/images/mask.png">
+        </div>
+        <div class="flex items-center justify-center">
+          <div class="w-[120px] h-[108px]">
+            <img class="w-full h-full object-cover" src="/images/sezar.png">
+          </div>
+        </div>
+        <h2 class="text-[56px] font-sans font-medium text-center leading-tight mb-10" v-motion-slide-visible-once-left
+          :delay="300">Results We Have Gotten
+        </h2>
+        <div class="container mx-auto">
+          <div class="grid grid-cols-4 gap-8 pt-10">
+            <VideoCart v-for="(testimonial, index) in 8" :key="index" name="Davis Pfaff"
+              desc="Co-Founder of Pfaff Brothers" v-motion-slide-visible-once-bottom :delay="300 + (index * 100)" />
+          </div>
+          <div class="flex items-center justify-center pt-14">
+            <Button name="Apply now" />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20">
+        <BgFixed>
+          <div class="h-[500px] flex flex-col items-center justify-center space-y-20">
+            <h2 class="text-[56px] font-sans font-medium text-center leading-tight" v-motion-slide-visible-once-left
+              :delay="300">Join Our Free Community
+            </h2>
+            <p class="text-[#8A8F98] max-w-[660px] text-center transform transition-all duration-700">
+              Our mission is to support your business at every stage by providing expert guidance, rigorous analysis,
+              and hands-on support.
+            </p>
+            <Button name="join community" />
+          </div>
+        </BgFixed>
+      </section>
+
+      <section class="pb-10">
+        <h2 class="text-[56px] font-sans font-medium text-center leading-tight mb-20" v-motion-slide-visible-once-left
+          :delay="300">Common Questions
+        </h2>
+        <Accordion />
+        <div class="flex items-center justify-center pt-14">
+            <Button name="Apply now" />
+          </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-800 py-12 mt-20">
-      <div class="container mx-auto px-4 text-center">
-        <div class="flex items-center justify-center space-x-2 mb-4">
-          <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-            <div class="w-3 h-3 bg-black rounded-full"></div>
-          </div>
-          <span class="text-lg font-bold tracking-wider">SOCRATIC SALES</span>
-        </div>
-        <p class="text-gray-400 text-sm">
-          © 2024 Socratic Sales. All rights reserved.
-        </p>
-      </div>
-    </footer>
+    <Footer />
 
     <!-- Mobile Menu Overlay -->
     <div v-if="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-95 z-50 lg:hidden" v-motion-fade
@@ -95,6 +159,33 @@ const isMenuOpen = ref(false)
 const heroSection = ref(null)
 const testimonialsSection = ref(null)
 const playingVideo = ref(null)
+
+const simpleCarts = ref([
+  {
+    id: 1,
+    name: 'Negative Acquisition Flywheel',
+    desc: 'Get paid to acquire customers. Our system flips the model - turning content into both revenue and demand. You install it. ',
+    icon: '/icons/box.svg'
+  },
+  {
+    id: 2,
+    name: 'Negative Acquisition Flywheel',
+    desc: 'Get paid to acquire customers. Our system flips the model - turning content into both revenue and demand. You install it. ',
+    icon: '/icons/box.svg'
+  },
+  {
+    id: 3,
+    name: 'Negative Acquisition Flywheel',
+    desc: 'Get paid to acquire customers. Our system flips the model - turning content into both revenue and demand. You install it. ',
+    icon: '/icons/box.svg'
+  },
+  {
+    id: 4,
+    name: 'Negative Acquisition Flywheel',
+    desc: 'Get paid to acquire customers. Our system flips the model - turning content into both revenue and demand. You install it. ',
+    icon: '/icons/box.svg'
+  },
+])
 
 // Intersection observer for animations
 const { stop: stopHeroObserver } = useIntersectionObserver(

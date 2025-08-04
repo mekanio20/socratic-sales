@@ -1,7 +1,7 @@
 <template>
     <button 
         type="button" 
-        class="button-bg-gradient font-ebgaramond font-bold text-[20px] text-black uppercase px-12 py-4 rounded-xl 
+        class="min-w-[320px] button-bg-gradient font-ebgaramond font-bold text-[20px] text-black uppercase px-12 py-4 rounded-xl 
                transition-all duration-300 ease-in-out 
                hover:scale-105 hover:shadow-lg
                relative overflow-hidden
