@@ -156,13 +156,6 @@ button:focus {
     outline: none;
 }
 
-button:focus-visible {
-    ring: 2px;
-    ring-color: rgba(75, 85, 99, 0.5);
-    ring-offset: 2px;
-    ring-offset-color: black;
-}
-
 /* Smooth icon rotation */
 .rotate-45 {
     transform: rotate(45deg);
