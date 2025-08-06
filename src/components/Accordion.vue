@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4 sm:px-0">
         <!-- Accordion Container -->
         <div class="space-y-4">
             <!-- Accordion Items -->
@@ -34,8 +34,8 @@
                 <div class="accordion-content overflow-hidden transition-all duration-500 ease-in-out" :style="{
                 maxHeight: item.isOpen ? item.contentHeight + 'px' : '0px',
                 opacity: item.isOpen ? 1 : 0
-            }">
-                    <div ref="contentRefs" class="px-8 pb-6 text-gray-300 text-base leading-relaxed"
+            }" ref="contentRefs">
+                    <div class="px-8 pb-6 text-gray-300 text-base leading-relaxed"
                         :class="{ 'animate-fade-in': item.isOpen }">
                         <div class="border-t border-gray-800/80 pt-4">
                             {{ item.answer }}

@@ -14,13 +14,14 @@
             </div>
         </div>
         <div class="container mx-auto px-4 text-center">
-            <div class="flex items-center justify-center space-x-2 mb-20">
-                <div class="w-[100px] h-[100px]">
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-2 mb-20">
+                <div class="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
                     <img class="w-full h-full object-cover" src="/icons/logo.png" />
                 </div>
-                <span class="text-4xl font-inter font-medium tracking-wider uppercase">SOCRATIC SALES</span>
+                <span class="text-3xl sm:text-4xl font-inter font-medium tracking-wider uppercase">SOCRATIC SALES</span>
             </div>
-            <p class="text-[#8A8F98] uppercase text-center">
+            <p class="text-[#8A8F98] uppercase text-center text-sm sm:text-base">
                 © 2025 Socratic sales. all rights reserved.
             </p>
         </div>

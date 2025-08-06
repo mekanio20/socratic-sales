@@ -26,7 +26,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.28.0":
+"@babel/parser@npm:^7.23.5, @babel/parser@npm:^7.28.0":
   version: 7.28.0
   resolution: "@babel/parser@npm:7.28.0"
   dependencies:
@@ -568,6 +568,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/compiler-sfc@npm:2.7.16":
+  version: 2.7.16
+  resolution: "@vue/compiler-sfc@npm:2.7.16"
+  dependencies:
+    "@babel/parser": "npm:^7.23.5"
+    postcss: "npm:^8.4.14"
+    prettier: "npm:^1.18.2 || ^2.0.0"
+    source-map: "npm:^0.6.1"
+  dependenciesMeta:
+    prettier:
+      optional: true
+  checksum: 10c0/eaeeef054c939e6cd7591199e2b998ae33d0afd65dc1b5675b54361f0c657c08ae82945791a1a8ca76762e1c1f8e69a00595daf280b854cbc3370ed5c5a34bcd
+  languageName: node
+  linkType: hard
+
 "@vue/compiler-sfc@npm:3.5.18":
   version: 3.5.18
   resolution: "@vue/compiler-sfc@npm:3.5.18"
@@ -1045,6 +1060,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:^3.22.0, core-js@npm:^3.26.1":
+  version: 3.45.0
+  resolution: "core-js@npm:3.45.0"
+  checksum: 10c0/118350f9f1d81f42a1276590d6c217dca04c789fdb8074c82e53056b1a784948769a62b16b98493fd73e8a988545432f302bca798571e56ad881b9c039a5a83c
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^7.0.6":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
@@ -1065,10 +1087,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.1.3":
+"csstype@npm:^3.1.0, csstype@npm:^3.1.3":
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
+  languageName: node
+  linkType: hard
+
+"custom-event-polyfill@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "custom-event-polyfill@npm:1.0.7"
+  checksum: 10c0/b73c90d646d78f4acdff5453fa0f165f6d5506e32d074ca57d27f2bb7d9412356dab8cec7c00a0956b069e4987a8546a2c2c4b866d155e9fc4c27d223a225b78
   languageName: node
   linkType: hard
 
@@ -1724,6 +1753,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"loadjs@npm:^4.2.0":
+  version: 4.3.0
+  resolution: "loadjs@npm:4.3.0"
+  checksum: 10c0/8884520a7c5f3b0f6e4d3bc01d200c73b9c468986bea26acb54939d4a3f5da08f40f712812fadc1ff6030fca936e8c9eeb842aaafd287e32ca0ce6ae9f10e759
+  languageName: node
+  linkType: hard
+
 "local-pkg@npm:^1.1.1":
   version: 1.1.1
   resolution: "local-pkg@npm:1.1.1"
@@ -2153,6 +2189,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"plyr@github:sampotts/plyr#develop":
+  version: 3.7.0
+  resolution: "plyr@https://github.com/sampotts/plyr.git#commit=d434c9af16e641400aaee93188594208d88f2658"
+  dependencies:
+    core-js: "npm:^3.22.0"
+    custom-event-polyfill: "npm:^1.0.7"
+    loadjs: "npm:^4.2.0"
+    rangetouch: "npm:^2.0.1"
+    url-polyfill: "npm:^1.1.12"
+  checksum: 10c0/11301ba4ffcd61688ec375ae95b5562bcb491e5579e9ffa3a04e3bf12f3fe4ed3139b82c9bc58d1df8f34a755a5bd9f864e8f03e136ee852347dc1559ac8eb16
+  languageName: node
+  linkType: hard
+
+"plyr@npm:^3.7.8":
+  version: 3.7.8
+  resolution: "plyr@npm:3.7.8"
+  dependencies:
+    core-js: "npm:^3.26.1"
+    custom-event-polyfill: "npm:^1.0.7"
+    loadjs: "npm:^4.2.0"
+    rangetouch: "npm:^2.0.1"
+    url-polyfill: "npm:^1.1.12"
+  checksum: 10c0/75c3e070f7829f76409e0d34784bf8070b827ad99c4713a36338af7ce8dff7cf38998403f34a4a0b4d6e99efd1856ee056443c7e838db1dbb98ed38828110a97
+  languageName: node
+  linkType: hard
+
 "popmotion@npm:^11.0.5":
   version: 11.0.5
   resolution: "popmotion@npm:11.0.5"
@@ -2235,7 +2297,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.47, postcss@npm:^8.5.6":
+"postcss@npm:^8.4.14, postcss@npm:^8.4.47, postcss@npm:^8.5.6":
   version: 8.5.6
   resolution: "postcss@npm:8.5.6"
   dependencies:
@@ -2243,6 +2305,15 @@ __metadata:
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
   checksum: 10c0/5127cc7c91ed7a133a1b7318012d8bfa112da9ef092dddf369ae699a1f10ebbd89b1b9f25f3228795b84585c72aabd5ced5fc11f2ba467eedf7b081a66fad024
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^1.18.2 || ^2.0.0":
+  version: 2.8.8
+  resolution: "prettier@npm:2.8.8"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 10c0/463ea8f9a0946cd5b828d8cf27bd8b567345cf02f56562d5ecde198b91f47a76b7ac9eae0facd247ace70e927143af6135e8cf411986b8cb8478784a4d6d724a
   languageName: node
   linkType: hard
 
@@ -2274,6 +2345,13 @@ __metadata:
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
   checksum: 10c0/900a93d3cdae3acd7d16f642c29a642aea32c2026446151f0778c62ac089d4b8e6c986811076e1ae180a694cedf077d453a11b58ff0a865629a4f82ab558e102
+  languageName: node
+  linkType: hard
+
+"rangetouch@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "rangetouch@npm:2.0.1"
+  checksum: 10c0/5f7947d1c5e95f50630ed1e0cbaeb4c32a6be37b66d864a68f7e70a4e86f782eb869df9fa2357b981b1301d2158eff50002a199b0fbbbf6e1746bc9d213914d9
   languageName: node
   linkType: hard
 
@@ -2527,13 +2605,16 @@ __metadata:
     autoprefixer: "npm:^10.4.21"
     hls.js: "npm:^1.6.7"
     pinia: "npm:^3.0.3"
+    plyr: "npm:^3.7.8"
     postcss: "npm:^8.5.6"
+    swiper: "npm:^11.2.10"
     tailwindcss: "npm:3"
     unplugin-auto-import: "npm:^19.3.0"
     unplugin-vue-components: "npm:^28.8.0"
     vite: "npm:^7.0.4"
     vue: "npm:^3.5.17"
     vue-advanced-cropper: "npm:^2.8.9"
+    vue-plyr: "npm:^7.0.0"
     vue-router: "npm:^4.5.1"
   languageName: unknown
   linkType: soft
@@ -2542,6 +2623,13 @@ __metadata:
   version: 1.2.1
   resolution: "source-map-js@npm:1.2.1"
   checksum: 10c0/7bda1fc4c197e3c6ff17de1b8b2c20e60af81b63a52cb32ec5a5d67a20a7d42651e2cb34ebe93833c5a2a084377e17455854fee3e21e7925c64a51b6a52b0faf
+  languageName: node
+  linkType: hard
+
+"source-map@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "source-map@npm:0.6.1"
+  checksum: 10c0/ab55398007c5e5532957cb0beee2368529618ac0ab372d789806f5718123cc4367d57de3904b4e6a4170eb5a0b0f41373066d02ca0735a0c4d75c7d328d3e011
   languageName: node
   linkType: hard
 
@@ -2665,6 +2753,13 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 10c0/6c4032340701a9950865f7ae8ef38578d8d7053f5e10518076e6554a9381fa91bd9c6850193695c141f32b21f979c985db07265a758867bac95de05f7d8aeb39
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^11.2.10":
+  version: 11.2.10
+  resolution: "swiper@npm:11.2.10"
+  checksum: 10c0/b7e3a7c79d92ccc62af77744edc376c9aefc771a0abd50c4adf07b5e3450b5da9ca7f84f5809e275ff65e1bc9d4500d930628e84a76fc7f2db403291c69b7fac
   languageName: node
   linkType: hard
 
@@ -2951,6 +3046,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"url-polyfill@npm:^1.1.12":
+  version: 1.1.13
+  resolution: "url-polyfill@npm:1.1.13"
+  checksum: 10c0/c44dcbf9c910ef554b839b65a0abfc76f7de5e91bf13f3e08014014602a2c3f5bb4247be7c2f31b98a404cbbecbec5c040b92e13b288475d2eb0fde57163e33b
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.2":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -3026,6 +3128,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vue-plyr@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "vue-plyr@npm:7.0.0"
+  dependencies:
+    plyr: "github:sampotts/plyr#develop"
+    vue: "npm:^2.6.12"
+  checksum: 10c0/0cb9521071bd1f907f0dae8ff8b118aae780f787003564f70e3478c1816e07e084ebabbab8be524617121ed5518d69c67fb6dd94b2fd2423baffddffae3605a6
+  languageName: node
+  linkType: hard
+
 "vue-router@npm:^4.5.1":
   version: 4.5.1
   resolution: "vue-router@npm:4.5.1"
@@ -3034,6 +3146,16 @@ __metadata:
   peerDependencies:
     vue: ^3.2.0
   checksum: 10c0/89fbc11e46c19a4c4d62b807596a0210726dc09bd9e6a319ded1ac0951e6933e581c56acd1b846d3891673b9bad7348564d28ecd8424126d63578b3b5d291d96
+  languageName: node
+  linkType: hard
+
+"vue@npm:^2.6.12":
+  version: 2.7.16
+  resolution: "vue@npm:2.7.16"
+  dependencies:
+    "@vue/compiler-sfc": "npm:2.7.16"
+    csstype: "npm:^3.1.0"
+  checksum: 10c0/15bf536c131a863d03c42386a4bbc82316262129421ef70e88d1758bcf951446ef51edeff42e3b27d026015330fe73d90155fca270eb5eadd30b0290735f2c3e
   languageName: node
   linkType: hard
 

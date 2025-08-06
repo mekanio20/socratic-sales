@@ -34,14 +34,17 @@ const RAW_RUNTIME_STATE =
           ["autoprefixer", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:10.4.21"],\
           ["hls.js", "npm:1.6.7"],\
           ["pinia", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:3.0.3"],\
+          ["plyr", "npm:3.7.8"],\
           ["postcss", "npm:8.5.6"],\
           ["socratic-sales", "workspace:."],\
+          ["swiper", "npm:11.2.10"],\
           ["tailwindcss", "npm:3.4.17"],\
           ["unplugin-auto-import", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:19.3.0"],\
           ["unplugin-vue-components", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:28.8.0"],\
           ["vite", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:7.0.6"],\
           ["vue", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:3.5.18"],\
           ["vue-advanced-cropper", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:2.8.9"],\
+          ["vue-plyr", "npm:7.0.0"],\
           ["vue-router", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:4.5.1"]\
         ],\
         "linkType": "SOFT"\
@@ -758,6 +761,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-sfc", [\
+      ["npm:2.7.16", {\
+        "packageLocation": "../../.yarn/berry/cache/@vue-compiler-sfc-npm-2.7.16-a7ff2cddb3-10c0.zip/node_modules/@vue/compiler-sfc/",\
+        "packageDependencies": [\
+          ["@babel/parser", "npm:7.28.0"],\
+          ["@vue/compiler-sfc", "npm:2.7.16"],\
+          ["postcss", "npm:8.5.6"],\
+          ["prettier", "npm:2.8.8"],\
+          ["source-map", "npm:0.6.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:3.5.18", {\
         "packageLocation": "../../.yarn/berry/cache/@vue-compiler-sfc-npm-3.5.18-b7d50a1ac2-10c0.zip/node_modules/@vue/compiler-sfc/",\
         "packageDependencies": [\
@@ -1347,6 +1361,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["core-js", [\
+      ["npm:3.45.0", {\
+        "packageLocation": "./.yarn/unplugged/core-js-npm-3.45.0-adcc91d781/node_modules/core-js/",\
+        "packageDependencies": [\
+          ["core-js", "npm:3.45.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["cross-spawn", [\
       ["npm:7.0.6", {\
         "packageLocation": "../../.yarn/berry/cache/cross-spawn-npm-7.0.6-264bddf921-10c0.zip/node_modules/cross-spawn/",\
@@ -1373,6 +1396,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/csstype-npm-3.1.3-e9a1c85013-10c0.zip/node_modules/csstype/",\
         "packageDependencies": [\
           ["csstype", "npm:3.1.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["custom-event-polyfill", [\
+      ["npm:1.0.7", {\
+        "packageLocation": "../../.yarn/berry/cache/custom-event-polyfill-npm-1.0.7-629381795b-10c0.zip/node_modules/custom-event-polyfill/",\
+        "packageDependencies": [\
+          ["custom-event-polyfill", "npm:1.0.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2073,6 +2105,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["loadjs", [\
+      ["npm:4.3.0", {\
+        "packageLocation": "../../.yarn/berry/cache/loadjs-npm-4.3.0-5056345cd4-10c0.zip/node_modules/loadjs/",\
+        "packageDependencies": [\
+          ["loadjs", "npm:4.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["local-pkg", [\
       ["npm:1.1.1", {\
         "packageLocation": "../../.yarn/berry/cache/local-pkg-npm-1.1.1-ae4e3dc95d-10c0.zip/node_modules/local-pkg/",\
@@ -2567,6 +2608,32 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["plyr", [\
+      ["https://github.com/sampotts/plyr.git#commit=d434c9af16e641400aaee93188594208d88f2658", {\
+        "packageLocation": "../../.yarn/berry/cache/plyr-https-cad2f12743-10c0.zip/node_modules/plyr/",\
+        "packageDependencies": [\
+          ["core-js", "npm:3.45.0"],\
+          ["custom-event-polyfill", "npm:1.0.7"],\
+          ["loadjs", "npm:4.3.0"],\
+          ["plyr", "https://github.com/sampotts/plyr.git#commit=d434c9af16e641400aaee93188594208d88f2658"],\
+          ["rangetouch", "npm:2.0.1"],\
+          ["url-polyfill", "npm:1.1.13"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:3.7.8", {\
+        "packageLocation": "../../.yarn/berry/cache/plyr-npm-3.7.8-8418ffb1ac-10c0.zip/node_modules/plyr/",\
+        "packageDependencies": [\
+          ["core-js", "npm:3.45.0"],\
+          ["custom-event-polyfill", "npm:1.0.7"],\
+          ["loadjs", "npm:4.3.0"],\
+          ["plyr", "npm:3.7.8"],\
+          ["rangetouch", "npm:2.0.1"],\
+          ["url-polyfill", "npm:1.1.13"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["popmotion", [\
       ["npm:11.0.5", {\
         "packageLocation": "../../.yarn/berry/cache/popmotion-npm-11.0.5-3c551ada08-10c0.zip/node_modules/popmotion/",\
@@ -2711,6 +2778,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["prettier", [\
+      ["npm:2.8.8", {\
+        "packageLocation": "../../.yarn/berry/cache/prettier-npm-2.8.8-430828a36c-10c0.zip/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:2.8.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["proc-log", [\
       ["npm:5.0.0", {\
         "packageLocation": "../../.yarn/berry/cache/proc-log-npm-5.0.0-405173f9b4-10c0.zip/node_modules/proc-log/",\
@@ -2745,6 +2821,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/queue-microtask-npm-1.2.3-fcc98e4e2d-10c0.zip/node_modules/queue-microtask/",\
         "packageDependencies": [\
           ["queue-microtask", "npm:1.2.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["rangetouch", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/rangetouch-npm-2.0.1-b22e78bc49-10c0.zip/node_modules/rangetouch/",\
+        "packageDependencies": [\
+          ["rangetouch", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2964,17 +3049,29 @@ const RAW_RUNTIME_STATE =
           ["autoprefixer", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:10.4.21"],\
           ["hls.js", "npm:1.6.7"],\
           ["pinia", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:3.0.3"],\
+          ["plyr", "npm:3.7.8"],\
           ["postcss", "npm:8.5.6"],\
           ["socratic-sales", "workspace:."],\
+          ["swiper", "npm:11.2.10"],\
           ["tailwindcss", "npm:3.4.17"],\
           ["unplugin-auto-import", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:19.3.0"],\
           ["unplugin-vue-components", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:28.8.0"],\
           ["vite", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:7.0.6"],\
           ["vue", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:3.5.18"],\
           ["vue-advanced-cropper", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:2.8.9"],\
+          ["vue-plyr", "npm:7.0.0"],\
           ["vue-router", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:4.5.1"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["source-map", [\
+      ["npm:0.6.1", {\
+        "packageLocation": "../../.yarn/berry/cache/source-map-npm-0.6.1-1a3621db16-10c0.zip/node_modules/source-map/",\
+        "packageDependencies": [\
+          ["source-map", "npm:0.6.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["source-map-js", [\
@@ -3115,6 +3212,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/supports-preserve-symlinks-flag-npm-1.0.0-f17c4d0028-10c0.zip/node_modules/supports-preserve-symlinks-flag/",\
         "packageDependencies": [\
           ["supports-preserve-symlinks-flag", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["swiper", [\
+      ["npm:11.2.10", {\
+        "packageLocation": "../../.yarn/berry/cache/swiper-npm-11.2.10-2bf88a66cf-10c0.zip/node_modules/swiper/",\
+        "packageDependencies": [\
+          ["swiper", "npm:11.2.10"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3450,6 +3556,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["url-polyfill", [\
+      ["npm:1.1.13", {\
+        "packageLocation": "../../.yarn/berry/cache/url-polyfill-npm-1.1.13-8dd7a34525-10c0.zip/node_modules/url-polyfill/",\
+        "packageDependencies": [\
+          ["url-polyfill", "npm:1.1.13"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["util-deprecate", [\
       ["npm:1.0.2", {\
         "packageLocation": "../../.yarn/berry/cache/util-deprecate-npm-1.0.2-e3fe1a219c-10c0.zip/node_modules/util-deprecate/",\
@@ -3527,6 +3642,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["vue", [\
+      ["npm:2.7.16", {\
+        "packageLocation": "../../.yarn/berry/cache/vue-npm-2.7.16-c163f6852b-10c0.zip/node_modules/vue/",\
+        "packageDependencies": [\
+          ["@vue/compiler-sfc", "npm:2.7.16"],\
+          ["csstype", "npm:3.1.3"],\
+          ["vue", "npm:2.7.16"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:3.5.18", {\
         "packageLocation": "../../.yarn/berry/cache/vue-npm-3.5.18-946142de5c-10c0.zip/node_modules/vue/",\
         "packageDependencies": [\
@@ -3574,6 +3698,17 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/vue",\
           "vue"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["vue-plyr", [\
+      ["npm:7.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/vue-plyr-npm-7.0.0-aab8325658-10c0.zip/node_modules/vue-plyr/",\
+        "packageDependencies": [\
+          ["plyr", "https://github.com/sampotts/plyr.git#commit=d434c9af16e641400aaee93188594208d88f2658"],\
+          ["vue", "npm:2.7.16"],\
+          ["vue-plyr", "npm:7.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\

@@ -21,6 +21,11 @@
 }
 
 @layer base {
+  :root {
+    --plyr-color-main: #feb433;
+    --plyr-video-control-background: #111;
+    --plyr-video-control-color: #fff;
+  }  
   html,
   body,
   #app {
