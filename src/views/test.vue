@@ -3,7 +3,7 @@
       <video-plyr ref="player" :options="{ controls: true }" class="w-full h-full">
          <video ref="video" playsinline preload="auto" class="w-full h-full object-cover cursor-pointer"
             @click="togglePlay">
-            <source src="/videos/demo.mp4" type="video/mp4" />
+            <source src="/videos/bg.mp4" type="video/mp4" />
             Tarayıcınız video öğesini desteklemiyor.
          </video>
       </video-plyr>

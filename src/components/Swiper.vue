@@ -18,7 +18,7 @@
             </div>
 
             <!-- Testimonials Swiper -->
-            <div class="testimonial-swiper-container relative">
+            <div class="testimonial-swiper-container relative bottom_scroll">
                 <swiper :modules="modules" :slides-per-view="1" :space-between="30" :centered-slides="true" :loop="true"
                     :autoplay="{
                         delay: 5000,
@@ -30,7 +30,7 @@
                         1280: { slidesPerView: 3, spaceBetween: 50 },
                     }" class="testimonial-swiper" @swiper="onSwiper" @slide-change="onSlideChange">
                     <swiper-slide v-for="(testimonial, index) in testimonials" :key="index" class="h-auto">
-                        <div class="testimonial-card bg-[#0D0D0D] backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 h-full flex flex-col transition-all duration-500 hover:bg-gray-900/60 hover:border-gray-700/70 hover:transform hover:scale-105"
+                        <div class="testimonial-card bg-[#0D0D0D] backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 h-full flex flex-col transition-all duration-500 hover:bg-[#0D0D0D] hover:border-[#FFB433] hover:transform hover:scale-105"
                             :class="{ 'featured-card': testimonial.featured }">
                             <!-- Quote -->
                             <div class="flex-1 mb-8">
@@ -47,7 +47,7 @@
                                         class="w-full h-full object-cover" loading="lazy" />
                                 </div>
                                 <div>
-                                    <h4 class="text-white font-semibold text-base">{{ testimonial.author.name }}</h4>
+                                    <h4 class="text-gradient font-semibold text-base">{{ testimonial.author.name }}</h4>
                                     <p class="text-gray-400 text-sm">{{ testimonial.author.title }}</p>
                                 </div>
                             </div>
@@ -196,7 +196,7 @@ onMounted(() => {
 
 .featured-card {
     border-color: rgba(234, 179, 8, 0.3) !important;
-    background: rgba(17, 24, 39, 0.7) !important;
+    background: #0D0D0D !important;
     transform: scale(1.05);
 }
 

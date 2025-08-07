@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black flex items-center justify-center px-4 py-8 sm:py-10">
+    <div class="bg-black flex items-center justify-center px-4 py-8 sm:py-10 bottom_scroll">
         <div class="w-full max-w-xl transform transition-all duration-1000 ease-out"
             :class="{ 'translate-y-4 opacity-0': !isLoaded, 'translate-y-0 opacity-100': isLoaded }">
 

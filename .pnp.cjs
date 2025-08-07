@@ -36,6 +36,7 @@ const RAW_RUNTIME_STATE =
           ["pinia", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:3.0.3"],\
           ["plyr", "npm:3.7.8"],\
           ["postcss", "npm:8.5.6"],\
+          ["scrollreveal", "npm:4.0.9"],\
           ["socratic-sales", "workspace:."],\
           ["swiper", "npm:11.2.10"],\
           ["tailwindcss", "npm:3.4.17"],\
@@ -1962,6 +1963,25 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["is-dom-node", [\
+      ["npm:1.0.4", {\
+        "packageLocation": "../../.yarn/berry/cache/is-dom-node-npm-1.0.4-6e7d8323f5-10c0.zip/node_modules/is-dom-node/",\
+        "packageDependencies": [\
+          ["is-dom-node", "npm:1.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["is-dom-node-list", [\
+      ["npm:1.2.1", {\
+        "packageLocation": "../../.yarn/berry/cache/is-dom-node-list-npm-1.2.1-42aa71ce37-10c0.zip/node_modules/is-dom-node-list/",\
+        "packageDependencies": [\
+          ["is-dom-node", "npm:1.0.4"],\
+          ["is-dom-node-list", "npm:1.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["is-extglob", [\
       ["npm:2.1.1", {\
         "packageLocation": "../../.yarn/berry/cache/is-extglob-npm-2.1.1-0870ea68b5-10c0.zip/node_modules/is-extglob/",\
@@ -2261,6 +2281,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["minipass", "npm:3.3.6"],\
           ["minipass-sized", "npm:1.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["miniraf", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/miniraf-npm-1.0.0-c2bf2b875a-10c0.zip/node_modules/miniraf/",\
+        "packageDependencies": [\
+          ["miniraf", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2872,6 +2901,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["rematrix", [\
+      ["npm:0.3.0", {\
+        "packageLocation": "../../.yarn/berry/cache/rematrix-npm-0.3.0-1a23f78fff-10c0.zip/node_modules/rematrix/",\
+        "packageDependencies": [\
+          ["rematrix", "npm:0.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["resolve", [\
       ["patch:resolve@npm%3A1.22.10#optional!builtin<compat/resolve>::version=1.22.10&hash=c3c19d", {\
         "packageLocation": "../../.yarn/berry/cache/resolve-patch-b5982cfa8c-10c0.zip/node_modules/resolve/",\
@@ -2957,6 +2995,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/safer-buffer-npm-2.1.2-8d5c0b705e-10c0.zip/node_modules/safer-buffer/",\
         "packageDependencies": [\
           ["safer-buffer", "npm:2.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["scrollreveal", [\
+      ["npm:4.0.9", {\
+        "packageLocation": "./.yarn/unplugged/scrollreveal-npm-4.0.9-2619baabb8/node_modules/scrollreveal/",\
+        "packageDependencies": [\
+          ["miniraf", "npm:1.0.0"],\
+          ["rematrix", "npm:0.3.0"],\
+          ["scrollreveal", "npm:4.0.9"],\
+          ["tealight", "npm:0.3.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3051,6 +3101,7 @@ const RAW_RUNTIME_STATE =
           ["pinia", "virtual:04761eb1becf80b46478c95089fd6566924597ccc162c2247c65ed134ac0cea50de3393ba1445fd74957263b6eaa40d5c9ac4bd8594daced8d1a6c74948c662c#npm:3.0.3"],\
           ["plyr", "npm:3.7.8"],\
           ["postcss", "npm:8.5.6"],\
+          ["scrollreveal", "npm:4.0.9"],\
           ["socratic-sales", "workspace:."],\
           ["swiper", "npm:11.2.10"],\
           ["tailwindcss", "npm:3.4.17"],\
@@ -3267,6 +3318,17 @@ const RAW_RUNTIME_STATE =
           ["mkdirp", "npm:3.0.1"],\
           ["tar", "npm:7.4.3"],\
           ["yallist", "npm:5.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["tealight", [\
+      ["npm:0.3.6", {\
+        "packageLocation": "../../.yarn/berry/cache/tealight-npm-0.3.6-d4a56ddca9-10c0.zip/node_modules/tealight/",\
+        "packageDependencies": [\
+          ["is-dom-node", "npm:1.0.4"],\
+          ["is-dom-node-list", "npm:1.2.1"],\
+          ["tealight", "npm:0.3.6"]\
         ],\
         "linkType": "HARD"\
       }]\

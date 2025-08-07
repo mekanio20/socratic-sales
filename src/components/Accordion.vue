@@ -4,7 +4,7 @@
         <div class="space-y-4">
             <!-- Accordion Items -->
             <div v-for="(item, index) in accordionItems" :key="index"
-                class="accordion-item bg-[#0D0D0D] backdrop-blur-sm rounded-2xl border border-[#414141] overflow-hidden transition-all duration-300 hover:border-gray-700/70"
+                class="accordion-item bg-[#0D0D0D] backdrop-blur-sm rounded-2xl border border-[#414141] overflow-hidden transition-all duration-300 hover:border-gray-700/70 bottom_scroll"
                 :class="{ 'accordion-active': item.isOpen }">
                 <!-- Accordion Header -->
                 <button @click="toggleAccordion(index)"

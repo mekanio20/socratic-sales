@@ -1,5 +1,5 @@
 <template>
-    <button @click="$emit('click')" type="button" class="w-full sm:min-w-[320px] sm:w-auto
+    <button @click="$emit('click')" type="button" class="w-full sm:min-w-[320px] sm:w-auto bottom_scroll
              button-bg-gradient font-ebgaramond font-bold
              text-[16px] sm:text-[20px] text-black uppercase
              px-6 sm:px-12 py-3 sm:py-4 rounded-xl 

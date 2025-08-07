@@ -1,6 +1,6 @@
 <template>
-    <header class="relative z-50 mb-10">
-        <nav class="border-b border-[#4F4F4F] bg-black px-4 py-3" v-motion-fade-in-down :delay="100">
+    <header class="relative z-50">
+        <nav class="border-b border-[#4F4F4F] bg-black px-4 py-3 bottom_scroll">
             <!-- Logo & Title Container -->
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-3">
                 <!-- Logo -->
