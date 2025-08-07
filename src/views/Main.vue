@@ -34,15 +34,7 @@
                                 Your browser does not support the video element.
                             </video>
                         </vue-plyr>
-                        <button v-if="isHeroMuted" @click="unmuteHeroVideo"
-                            class="absolute top-4 right-4 z-10 bg-black/60 rounded-full p-3 hover:bg-black/80 transition-colors">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 9V15H9L14 20V4L9 9H5Z" fill="currentColor" />
-
-                                <line x1="3" y1="3" x2="21" y2="21" stroke="red" stroke-width="2" />
-                            </svg>
-                        </button>
+                        <Mute v-if="isHeroMuted" @click="unmuteHeroVideo" />
                     </div>
                 </div>
 

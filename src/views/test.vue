@@ -1,34 +1,45 @@
 <template>
-   <div class="relative aspect-video rounded-lg overflow-hidden shadow-2xl bg-black group">
-      <video-plyr ref="player" :options="{ controls: true }" class="w-full h-full">
-         <video ref="video" playsinline preload="auto" class="w-full h-full object-cover cursor-pointer"
-            @click="togglePlay">
-            <source src="/videos/bg.mp4" type="video/mp4" />
-            Tarayıcınız video öğesini desteklemiyor.
-         </video>
-      </video-plyr>
-
-      <!-- Orta Play Butonu -->
-      <button v-if="!isPlaying" @click="togglePlay"
-         class="absolute inset-0 flex items-center justify-center text-white text-5xl bg-black/50 hover:bg-black/70 transition">
-         ▶
-      </button>
+   <div v-if="show"
+      class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-black px-6 py-4 rounded-lg shadow-lg border border-black animate-bounce cursor-pointer z-50"
+      @click="unmute">
+      <div class="flex flex-col items-center space-y-2 font-inter font-medium">
+         <p class="font-bold text-lg text-center">Your video has started</p>
+         <img class="w-[90px] pb-2" src="/icons/mute.svg" />
+         <p class="text-sm text-center font-semibold">Click to listen</p>
+      </div>
    </div>
 </template>
 
 <script setup>
-const isPlaying = ref(false)
-const video = ref(null)
+const iconPulse = ref(false)
+const show = ref(true)
 
-const togglePlay = () => {
-   if (!video.value) return
-
-   if (video.value.paused) {
-      video.value.play()
-      isPlaying.value = true
-   } else {
-      video.value.pause()
-      isPlaying.value = false
+const unmute = () => {
+   const video = document.querySelector('video')
+   if (video) {
+      video.muted = false
+      video.volume = 1
    }
+
+   show.value = false
 }
 </script>
+
+<style scoped>
+/* Opsiyonel: Yumuşak animasyon geçişi için */
+@keyframes bounce {
+
+   0%,
+   100% {
+      transform: translate(-50%, -50%) translateY(0);
+   }
+
+   50% {
+      transform: translate(-50%, -50%) translateY(-10px);
+   }
+}
+
+.animate-bounce {
+   animation: bounce 1.2s infinite;
+}
+</style>
