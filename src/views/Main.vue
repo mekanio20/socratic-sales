@@ -34,7 +34,7 @@
                                 Your browser does not support the video element.
                             </video>
                         </vue-plyr>
-                        <Mute v-if="isHeroMuted" @click="unmuteHeroVideo" />
+                        <Mute class="w-[40%]" v-if="isHeroMuted" @click="unmuteHeroVideo" />
                     </div>
                 </div>
 
@@ -58,16 +58,13 @@
                 </div>
             </section>
 
-            <!-- Calendly & Inputs -->
-            <section class="container mx-auto py-20 px-4">
-                <Calendly />
-            </section>
-
+            <!-- Calendly -->
             <section class="container mx-auto py-20 px-4">
                 <h2
                     class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-10 bottom_scroll">
                     Fill in the forms to apply
                 </h2>
+                <Calendly />
             </section>
 
             <!-- Discovery Call Section -->
