@@ -30,11 +30,11 @@
                         <vue-plyr class="w-full h-full">
                             <video ref="heroVideo" playsinline controls preload="auto"
                                 class="w-full h-full object-cover" :muted="isHeroMuted" autoplay>
-                                <source src="/videos/demo.mp4" type="video/mp4" />
+                                <source src="/3/main.mp4" type="video/mp4" />
                                 Your browser does not support the video element.
                             </video>
                         </vue-plyr>
-                        <Mute class="w-[40%]" v-if="isHeroMuted" @click="unmuteHeroVideo" />
+                        <Mute class="sm:w-[40%] w-[35%]" v-if="isHeroMuted" @click="unmuteHeroVideo" />
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
                 </h2>
 
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-                    <VideoCart v-for="(testimonial, index) in 3" :key="index" :id="index" name="Davis Pfaff"
+                    <VideoCart v-for="(item, index) in testimonials" :key="index" :id="item.id" :videoSource="item.video" name="Davis Pfaff"
                         desc="Co-Founder of Pfaff Brothers" class="bottom_scroll" />
                 </div>
             </section>
@@ -113,8 +113,8 @@
                 </h2>
 
                 <div class="container mx-auto">
-                    <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 pt-10">
-                        <VideoCart v-for="(testimonial, index) in 8" :key="index" name="Davis Pfaff"
+                    <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 pt-10">
+                        <VideoCart v-for="(item, index) in videos" :key="index" :id="item.id" :videoSource="item.video" name="Davis Pfaff"
                             desc="Co-Founder of Pfaff Brothers" class="bottom_scroll" />
                     </div>
 
@@ -166,10 +166,8 @@ import ScrollReveal from 'scrollreveal'
 import { ref, onMounted } from 'vue'
 const router = useRouter()
 // Reactive refs
-const isMenuOpen = ref(false)
 const heroSection = ref(null)
 const testimonialsSection = ref(null)
-const playingVideo = ref(null)
 
 const heroVideo = ref(null)
 const isHeroMuted = ref(true)
@@ -179,6 +177,48 @@ const unmuteHeroVideo = () => {
         isHeroMuted.value = false
     }
 }
+
+const testimonials = ref([
+    {
+        id: 1,
+        video: '/3/1.mp4'
+    },
+    {
+        id: 2,
+        video: '/3/2.mp4'
+    },
+    {
+        id: 3,
+        video: '/3/3.mp4'
+    }
+])
+
+const videos = ref([
+    {
+        id: 1,
+        video: '/6/1.mp4'
+    },
+    {
+        id: 2,
+        video: '/6/2.mp4'
+    },
+    {
+        id: 3,
+        video: '/6/3.mp4'
+    },
+    {
+        id: 4,
+        video: '/6/4.mp4'
+    },
+    {
+        id: 5,
+        video: '/6/5.mp4'
+    },
+    {
+        id: 6,
+        video: '/6/6.mp4'
+    }
+])
 
 const simpleCarts = ref([
     {
@@ -209,35 +249,6 @@ const simpleCarts = ref([
 
 const handleClick = () => {
     router.push({ name: 'Schedule' })
-}
-
-// Intersection observer for animations
-const { stop: stopHeroObserver } = useIntersectionObserver(
-    heroSection,
-    ([{ isIntersecting }]) => {
-        if (isIntersecting) {
-            // Hero animation trigger
-        }
-    }
-)
-
-const { stop: stopTestimonialsObserver } = useIntersectionObserver(
-    testimonialsSection,
-    ([{ isIntersecting }]) => {
-        if (isIntersecting) {
-            // Testimonials animation trigger
-        }
-    }
-)
-
-// Mock video play function
-const playVideo = (index) => {
-    playingVideo.value = playingVideo.value === index ? null : index
-}
-
-// Menu toggle
-const toggleMenu = () => {
-    isMenuOpen.value = !isMenuOpen.value
 }
 
 onMounted(() => {

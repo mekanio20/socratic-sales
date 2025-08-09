@@ -23,7 +23,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
 const isPlaying = ref(false)
 const isHovered = ref(false)
 const video = ref(null)
