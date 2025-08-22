@@ -1,6 +1,6 @@
 <template>
    <div v-if="show"
-      class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-black px-6 py-4 rounded-lg shadow-lg border border-black animate-bounce cursor-pointer z-50 w-full max-w-[300px]"
+      class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-black px-6 py-4 rounded-lg shadow-lg border border-black animate-bounce cursor-pointer z-50 lg:w-[300px] md:w-[200px] w-[180px]"
       @click="unmute">
       <div class="flex flex-col items-center space-y-2 font-inter font-medium text-center break-words">
          <p class="font-bold text-nowrap" style="font-size: clamp(0.75rem, 2.5vw, 1rem);">

@@ -51,32 +51,26 @@
 const contentRefs = ref([])
 const accordionItems = ref([
     {
-        question: "What Is Socratic Sales?",
-        answer: "Socratic Sales is a methodology that uses strategic questioning to guide prospects through a discovery process. Instead of pitching features, you ask thoughtful questions that help prospects identify their own problems and arrive at solutions naturally. This approach builds trust, reduces resistance, and leads to more meaningful conversations that convert better.",
+        question: "Who is the Socratic Sales Method for?",
+        answer: "This program is for agencies, coaches, and high ticket closers who want to stop relying on scripts and start signing consistent four and five figure clients. It works whether you are just starting out or already experienced.",
         isOpen: false,
         contentHeight: 0
     },
     {
-        question: "How long will it take to see results?",
-        answer: "Most users see initial improvements in their conversation quality within the first week of implementation. Significant results in conversion rates typically appear within 30-60 days as you master the techniques. However, the timeline varies based on your current skill level, industry, and how consistently you apply the methods. We provide ongoing support and metrics tracking to help you measure progress.",
+        question: "How is this different from other sales coaching?",
+        answer: "Most sales trainings give you scripts, memorized lines, or surface level tactics. The Socratic Method goes deeper. It teaches you how the human brain makes decisions and how to guide conversations naturally. No BS tactics. Just pure psychology, philosophy and human nature applied to sales.",
         isOpen: false,
         contentHeight: 0
     },
     {
-        question: "Is this license only beneficial for infopreneurs?",
-        answer: "Not at all! While infopreneurs can definitely benefit from Socratic Sales, this methodology works across all industries and business types. Whether you're in B2B software, consulting, e-commerce, real estate, or any other field that involves selling, these questioning techniques will improve your results. The principles are universal and can be adapted to any sales context.",
+        question: "Can I get personal coaching or mentorship?",
+        answer: "Yes. You get one on one coaching and WhatsApp access so you always know what to say and how to close.",
         isOpen: false,
         contentHeight: 0
     },
     {
-        question: "What makes Quantum different from other options I've considered?",
-        answer: "Quantum combines cutting-edge AI technology with proven sales psychology in a way that no other platform does. While other tools focus on automation or basic CRM features, Quantum provides intelligent conversation guidance, real-time coaching, and adaptive learning that evolves with your selling style. Plus, our implementation support ensures you actually use what you learn, rather than just consuming more content.",
-        isOpen: false,
-        contentHeight: 0
-    },
-    {
-        question: "What Is Socratic Sales?",
-        answer: "Socratic Sales is a methodology that uses strategic questioning to guide prospects through a discovery process. Instead of pitching features, you ask thoughtful questions that help prospects identify their own problems and arrive at solutions naturally. This approach builds trust, reduces resistance, and leads to more meaningful conversations that convert better.",
+        question: "How fast will I see results?",
+        answer: "Most clients begin closing four and five figure business owners within 30 to 60 days depending on effort and number of calls.",
         isOpen: false,
         contentHeight: 0
     }

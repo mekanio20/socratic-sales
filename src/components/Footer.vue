@@ -2,14 +2,14 @@
     <footer class="py-12 mt-20">
         <div class="flex items-center justify-center mb-20">
             <div class="flex items-center space-x-8">
-                <a class="w-[22px] h-[22px]" href="#">
+                <a href="https://x.com/SageInSales" target="_blank">
                     <img src="/icons/x.svg" />
                 </a>
-                <a class="w-[22px] h-[22px]" href="#">
+                <a href="https://www.instagram.com/arslankkjj/" target="_blank">
                     <img src="/icons/instagram.svg" />
                 </a>
-                <a class="w-[22px] h-[22px]" href="#">
-                    <img src="/icons/telegram.svg" />
+                <a class="" href="https://www.skool.com/@arslan-kk-7172?g=the-socratic-sales-academy-8627" target="_blank">
+                    <img src="/icons/sk.svg" />
                 </a>
             </div>
         </div>
@@ -21,7 +21,7 @@
                 </div>
                 <span class="text-3xl sm:text-4xl font-inter font-medium tracking-wider uppercase">SOCRATIC SALES</span>
             </div>
-            <p class="text-[#8A8F98] uppercase text-center text-sm sm:text-base">
+            <p class="text-[#8A8F98] font-inter uppercase text-center text-sm sm:text-base">
                 © 2025 Socratic sales. all rights reserved.
             </p>
         </div>

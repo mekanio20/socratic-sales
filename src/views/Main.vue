@@ -14,15 +14,19 @@
                     class="flex items-center space-x-4 border border-[#626262] pr-6 sm:pr-10 pl-4 sm:pl-6 py-1 rounded-full text-bg-gradient text-center">
                     <div class="w-2 h-2 bg-white rounded-full white-pulse-shadow"></div>
                     <h2 class="w-fit font-inter sm:text-[15px] text-[12px] text-wrap">
-                        For Infopreneurs, Coaches, & Consultants
+                        For Agencies, Coaches, & Closers
                     </h2>
                 </div>
             </div>
             <!-- Hero Section -->
-            <section ref="heroSection" class="max-w-[1000px] mx-auto px-4 text-center">
-                <h2 class="text-[32px] sm:text-[40px] font-sans leading-tight mb-10 sm:mb-20 bottom_scroll">
-                    Would You Like Me To Work 1:1 With You and Install My 5 Info/Coaching Scaling Systems?
+            <section ref="heroSection" class="max-w-[1300px] mx-auto px-4 text-center">
+                <h2 class="text-[32px] sm:text-[40px] font-sans leading-tight bottom_scroll">
+                    STEAL The Human-Brain Based Closing Method That 100+ Businesses Use To Turn Basic Conversations Into
+                    4–5 Figure Clients Every Month.
                 </h2>
+                <p class="font-inter text-[#FFFFFFCC] my-14 leading-[100%] bottom_scroll">
+                    If you don’t close clients, we don’t get paid. Watch the video below to see how it works.
+                </p>
 
                 <!-- Hero Video -->
                 <div class="relative mb-12 max-w-4xl mx-auto bottom_scroll">
@@ -49,12 +53,13 @@
             <section ref="testimonialsSection" class="container mx-auto py-20 px-4">
                 <h2
                     class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-10 bottom_scroll">
-                    Hear From Our Clients
+                    What Our Clients Are Saying
                 </h2>
 
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-                    <VideoCart v-for="(item, index) in testimonials" :key="index" :id="item.id" :videoSource="item.video" name="Davis Pfaff"
-                        desc="Co-Founder of Pfaff Brothers" class="bottom_scroll" />
+                    <VideoCart v-for="(item, index) in testimonials" :key="index" :id="item.id"
+                        :videoSource="item.video" :name="item.name" :desc="item.desc"
+                        class="bottom_scroll" />
                 </div>
             </section>
 
@@ -62,7 +67,7 @@
             <section class="container mx-auto py-20 px-4">
                 <h2
                     class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-10 bottom_scroll">
-                    Fill in the forms to apply
+                    Schedule Your Socratic Call
                 </h2>
                 <Calendly />
             </section>
@@ -79,7 +84,7 @@
                 <div class="container mx-auto">
                     <h2
                         class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-10 bottom_scroll">
-                        What to Expect on Your Discovery Call
+                        What You’ll Unlock With The Socratic Sales Method
                     </h2>
 
                     <div class="grid sm:grid-cols-2 grid-cols-1 gap-2 pt-10">
@@ -109,13 +114,13 @@
 
                 <h2
                     class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-10 bottom_scroll">
-                    Results We Have Gotten
+                    Hear From Our Clients
                 </h2>
 
                 <div class="container mx-auto">
                     <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 pt-10">
-                        <VideoCart v-for="(item, index) in videos" :key="index" :id="item.id" :videoSource="item.video" name="Davis Pfaff"
-                            desc="Co-Founder of Pfaff Brothers" class="bottom_scroll" />
+                        <VideoCart v-for="(item, index) in videos" :key="index" :id="item.id" :videoSource="item.video"
+                            :name="item.name" class="bottom_scroll" />
                     </div>
 
                     <div class="flex items-center justify-center pt-14">
@@ -130,13 +135,12 @@
                     <div
                         class="h-[500px] flex flex-col items-center justify-center space-y-10 sm:space-y-20 text-center">
                         <h2 class="text-[36px] sm:text-[56px] font-sans font-medium leading-tight bottom_scroll">
-                            Join Our Free Community
+                            Join The Free Socratic Sales Community
                         </h2>
                         <p class="text-[#8A8F98] max-w-[660px]">
-                            Our mission is to support your business at every stage by providing expert guidance,
-                            rigorous analysis, and hands-on support.
+                            Sharpen your closing skills, learn psychology-driven sales, and connect with other business owners mastering the Socratic Method.
                         </p>
-                        <Button name="Join community" @click="handleClick" />
+                        <Button name="Join community" @click="joinCommunity" />
                     </div>
                 </BgFixed>
             </section>
@@ -181,74 +185,90 @@ const unmuteHeroVideo = () => {
 const testimonials = ref([
     {
         id: 1,
-        video: '/3/1.mp4'
+        video: '/3/1.mp4',
+        name: 'Patrice Mougeot',
+        desc: 'Co-Founder of Moojo Autospa'
     },
     {
         id: 2,
-        video: '/3/2.mp4'
+        video: '/3/2.mp4',
+        name: 'Katherine Jones',
+        desc: 'Founder of Green Volts Media'
     },
     {
         id: 3,
-        video: '/3/3.mp4'
+        video: '/3/3.mp4',
+        name: 'Michael DiBari',
+        desc: 'Founder of Dicohr Marketing'
     }
 ])
 
 const videos = ref([
     {
         id: 1,
-        video: '/6/1.mp4'
+        video: '/6/1.mp4',
+        name: 'Goce Spiroski'
     },
     {
         id: 2,
-        video: '/6/2.mp4'
+        video: '/6/2.mp4',
+        name: 'Aiden Oosahwe'
     },
     {
         id: 3,
-        video: '/6/3.mp4'
+        video: '/6/3.mp4',
+        name: 'Marius Bernard'
     },
     {
         id: 4,
-        video: '/6/4.mp4'
+        video: '/6/4.mp4',
+        name: 'Noah Christopher'
     },
     {
         id: 5,
-        video: '/6/5.mp4'
+        video: '/6/5.mp4',
+        name: 'Mitchell Parrish'
     },
     {
         id: 6,
-        video: '/6/6.mp4'
+        video: '/6/6.mp4',
+        name: 'Emil Delster'
     }
 ])
 
 const simpleCarts = ref([
     {
         id: 1,
-        name: 'Negative Acquisition Flywheel',
-        desc: 'Get paid to acquire customers. Our system flips the model - turning content into both revenue and demand. You install it. ',
-        icon: '/icons/box.svg'
+        name: 'Socratic Objection Flip',
+        desc: 'Turn objections into opportunities using brain-based questioning that makes prospects sell themselves.',
+        icon: '/icons/question.svg'
     },
     {
         id: 2,
-        name: 'Negative Acquisition Flywheel',
-        desc: 'Get paid to acquire customers. Our system flips the model - turning content into both revenue and demand. You install it. ',
-        icon: '/icons/box.svg'
+        name: 'Socratic Closing Psychology',
+        desc: 'Discover how to guide conversations naturally. No scripts, no pressure, just high-ticket clients saying “yes.”',
+        icon: '/icons/streamline_target.svg'
     },
     {
         id: 3,
-        name: 'Negative Acquisition Flywheel',
-        desc: 'Get paid to acquire customers. Our system flips the model - turning content into both revenue and demand. You install it. ',
-        icon: '/icons/box.svg'
+        name: 'Socratic Money Flow',
+        desc: 'Build predictable cash flow signing 4–5 figure business owners every month by mastering how people really decide.',
+        icon: '/icons/statistic.svg'
     },
     {
         id: 4,
-        name: 'Negative Acquisition Flywheel',
-        desc: 'Get paid to acquire customers. Our system flips the model - turning content into both revenue and demand. You install it. ',
-        icon: '/icons/box.svg'
+        name: 'Socratic Mastery',
+        desc: 'Move beyond quick wins. Master a psychology driven framework you will use for life in sales, negotiations, and influence.',
+        icon: '/icons/sahmat.svg'
     },
 ])
 
 const handleClick = () => {
     router.push({ name: 'Schedule' })
+}
+
+const joinCommunity = () => {
+    window.open('https://whop.com/socraticsales/', '_blank')
 }
 
 onMounted(() => {

@@ -2,10 +2,9 @@
     <div class="bg-black px-4">
         <div class="max-w-7xl mx-auto font-inter">
             <!-- Trusted by Section -->
-            <div class="text-center mb-16">
+            <!-- <div class="text-center mb-16">
                 <h2 class="text-gradient font-inter text-[26px] mb-8">Trusted by:</h2>
 
-                <!-- Avatar Row -->
                 <div class="flex justify-center items-center space-x-4 mb-12">
                     <div v-for="(avatar, index) in trustedAvatars" :key="index" @click="handleAvatarClick(avatar.id)"
                         class="w-[44px] h-[44px] rounded-full overflow-hidden p-1 border border-[#0D0D0D] hover:border-yellow-500 duration-300 cursor-pointer"
@@ -15,17 +14,17 @@
                             loading="lazy" />
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Testimonials Swiper -->
             <div class="testimonial-swiper-container relative bottom_scroll">
-                <swiper :modules="modules" :slides-per-view="1" :space-between="30" :centered-slides="true" :loop="true"
+                <swiper :modules="modules" :slides-per-view="1" :space-between="30" :loop="true"
                     :autoplay="{
                         delay: 5000,
                         disableOnInteraction: false,
                     }" :breakpoints="{
                         640: { slidesPerView: 1, spaceBetween: 30 },
-                        768: { slidesPerView: 2, spaceBetween: 30 },
+                        700: { slidesPerView: 2, spaceBetween: 30 },
                         1024: { slidesPerView: 3, spaceBetween: 40 },
                         1280: { slidesPerView: 3, spaceBetween: 50 },
                     }" class="testimonial-swiper" @swiper="onSwiper" @slide-change="onSlideChange">
@@ -41,11 +40,11 @@
 
                             <!-- Author -->
                             <div class="flex items-center space-x-4 mt-auto">
-                                <div
+                                <!-- <div
                                     class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-700">
                                     <img :src="testimonial.author.avatar" :alt="testimonial.author.name"
                                         class="w-full h-full object-cover" loading="lazy" />
-                                </div>
+                                </div> -->
                                 <div>
                                     <h4 class="text-gradient font-semibold text-base">{{ testimonial.author.name }}</h4>
                                     <p class="text-gray-400 text-sm">{{ testimonial.author.title }}</p>
@@ -84,61 +83,31 @@ const trustedAvatars = ref([
 const testimonials = ref([
     {
         id: 1,
-        quote: "Iman and his team helped me establish a solid foundation for my business, enabling me to surpass $70,000 in daily revenue three times in 2024.",
+        quote: "“It’s the best decision that we’ve done as a company in our field. It’s been 2 weeks since I started with Arslan and we’ve actually booked over $26.000 in 2 weeks, our revenue has bumped up dramatically.”",
         author: {
-            name: "Jean Hollaender",
-            title: "Founder of Liberty Webi",
+            name: "Patrice Mougeot",
+            title: "Co-Founder of Moojo Autospa",
             avatar: "/images/person-1.png"
         },
         featured: false
     },
     {
         id: 2,
-        quote: "Iman helped me reframe my entire approach to business, inspiring me to think bigger beyond just coaching and focus on building my empire.",
+        quote: "“It’s cutting maybe even years out of your trial and errors. He’s provided all the information and knowledge that I need to move forward, to just sit there and go through it bit by bit.”",
         author: {
-            name: "Jean Hollaender",
-            title: "Founder of Liberty Webi",
+            name: "Katherine Jones",
+            title: "Founder of Green Volts Media",
             avatar: "/images/person-2.png"
         },
         featured: false
     },
     {
         id: 3,
-        quote: "Iman, Ali, and their team offer unparalleled transparency, sharing invaluable insights into personal branding and information products. Their masterclass is a game-changer for anyone serious about growth in this space.",
+        quote: '"I gotta say, it\'s the best decision I have ever made. Recently in the past 2 weeks I\'ve actually collected $ 5.500 for my first 2 clients. None of that would be possible without Arslan. Eternally grateful!"',
         author: {
-            name: "Jean Hollaender",
-            title: "Founder of Liberty Webi",
+            name: "Michael DiBari",
+            title: "Founder of Dicohr Marketing",
             avatar: "/images/person-3.png"
-        },
-        featured: false
-    },
-    {
-        id: 4,
-        quote: "If you want to learn how to process and systemize information from every angle of the business, this is the team you want to learn from.",
-        author: {
-            name: "Jean Hollaender",
-            title: "Founder of Liberty Webi",
-            avatar: "/images/person-4.png"
-        },
-        featured: false
-    },
-    {
-        id: 5,
-        quote: "The insights and strategies provided have completely transformed how I approach my business operations and customer relationships.",
-        author: {
-            name: "Sarah Johnson",
-            title: "CEO of TechStart",
-            avatar: "/images/person-5.png"
-        },
-        featured: false
-    },
-    {
-        id: 6,
-        quote: "Iman's coaching has been instrumental in helping me navigate the complexities of the digital landscape and achieve success in my career.",
-        author: {
-            name: "Sarah Johnson",
-            title: "CEO of TechStart",
-            avatar: "/images/person-6.png"
         },
         featured: false
     }
@@ -182,7 +151,7 @@ onMounted(() => {
 <style scoped>
 /* Testimonial Swiper Custom Styles */
 .testimonial-swiper {
-    padding: 2rem 0 4rem 0;
+    padding-top: 2rem;
 }
 
 .testimonial-swiper :deep(.swiper-slide) {
