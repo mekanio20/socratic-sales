@@ -16,14 +16,16 @@
 
 <script setup>
 const show = ref(true)
+const emit = defineEmits(['click'])
 
 const unmute = () => {
-   const video = document.querySelector('video')
+   const video = document.querySelector('#hero-video')
    if (video) {
       video.muted = false
       video.volume = 1
    }
    show.value = false
+   emit('click')
 }
 </script>
 

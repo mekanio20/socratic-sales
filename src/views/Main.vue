@@ -32,13 +32,13 @@
                 <div class="relative mb-12 max-w-4xl mx-auto bottom_scroll">
                     <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl font-inter relative">
                         <vue-plyr class="w-full h-full">
-                            <video ref="heroVideo" playsinline controls preload="auto"
+                            <video id="hero-video" ref="heroVideo" playsinline controls preload="auto"
                                 class="w-full h-full object-cover" :muted="isHeroMuted" autoplay>
                                 <source src="/3/main.mp4" type="video/mp4" />
                                 Your browser does not support the video element.
                             </video>
                         </vue-plyr>
-                        <Mute class="sm:w-[40%] w-[35%]" v-if="isHeroMuted" @click="unmuteHeroVideo" />
+                        <Mute class="sm:w-[40%] w-[35%]" v-if="isHeroMuted" @click="toggleHeroMute" />
                     </div>
                 </div>
 
@@ -58,8 +58,7 @@
 
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                     <VideoCart v-for="(item, index) in testimonials" :key="index" :id="item.id"
-                        :videoSource="item.video" :name="item.name" :desc="item.desc"
-                        class="bottom_scroll" />
+                        :videoSource="item.video" :name="item.name" :desc="item.desc" class="bottom_scroll" />
                 </div>
             </section>
 
@@ -138,7 +137,8 @@
                             Join The Free Socratic Sales Community
                         </h2>
                         <p class="text-[#8A8F98] max-w-[660px]">
-                            Sharpen your closing skills, learn psychology-driven sales, and connect with other business owners mastering the Socratic Method.
+                            Sharpen your closing skills, learn psychology-driven sales, and connect with other business
+                            owners mastering the Socratic Method.
                         </p>
                         <Button name="Join community" @click="joinCommunity" />
                     </div>
@@ -175,10 +175,17 @@ const testimonialsSection = ref(null)
 
 const heroVideo = ref(null)
 const isHeroMuted = ref(true)
-const unmuteHeroVideo = () => {
+
+const toggleHeroMute = () => {
+    isHeroMuted.value = !isHeroMuted.value
+    
     if (heroVideo.value) {
-        heroVideo.value.muted = false
-        isHeroMuted.value = false
+        heroVideo.value.muted = isHeroMuted.value
+        
+        const plyrInstance = heroVideo.value.closest('.plyr')?.plyr
+        if (plyrInstance) {
+            plyrInstance.muted = isHeroMuted.value
+        }
     }
 }
 
@@ -205,32 +212,32 @@ const testimonials = ref([
 
 const videos = ref([
     {
-        id: 1,
+        id: 4,
         video: '/6/1.mp4',
         name: 'Goce Spiroski'
     },
     {
-        id: 2,
+        id: 5,
         video: '/6/2.mp4',
         name: 'Aiden Oosahwe'
     },
     {
-        id: 3,
+        id: 6,
         video: '/6/3.mp4',
         name: 'Marius Bernard'
     },
     {
-        id: 4,
+        id: 7,
         video: '/6/4.mp4',
         name: 'Noah Christopher'
     },
     {
-        id: 5,
+        id: 8,
         video: '/6/5.mp4',
         name: 'Mitchell Parrish'
     },
     {
-        id: 6,
+        id: 9,
         video: '/6/6.mp4',
         name: 'Emil Delster'
     }
@@ -282,9 +289,19 @@ onMounted(() => {
         opacity: 0,
         reset: true
     });
+    
     if (heroVideo.value) {
         heroVideo.value.muted = true
         isHeroMuted.value = true
     }
+    
+    setTimeout(() => {
+        if (heroVideo.value) {
+            const plyrInstance = heroVideo.value.closest('.plyr')?.plyr
+            if (plyrInstance) {
+                plyrInstance.muted = true
+            }
+        }
+    }, 200)
 })
 </script>
