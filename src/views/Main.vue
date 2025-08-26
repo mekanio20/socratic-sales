@@ -14,22 +14,23 @@
                     class="flex items-center space-x-4 border border-[#626262] pr-6 sm:pr-10 pl-4 sm:pl-6 py-1 rounded-full text-bg-gradient text-center">
                     <div class="w-2 h-2 bg-white rounded-full white-pulse-shadow"></div>
                     <h2 class="w-fit font-inter sm:text-[15px] text-[12px] text-wrap">
-                        For Agencies, Coaches, & Closers
+                        For Agency Owners, Coaches, & Closers
                     </h2>
                 </div>
             </div>
             <!-- Hero Section -->
-            <section ref="heroSection" class="max-w-[1300px] mx-auto px-4 text-center">
-                <h2 class="text-[32px] sm:text-[40px] font-sans leading-tight bottom_scroll">
-                    STEAL The Human-Brain Based Closing Method That 100+ Businesses Use To Turn Basic Conversations Into
-                    4–5 Figure Clients Every Month.
+            <section ref="heroSection" class="max-w-[1000px] mx-auto px-4 text-center">
+                <h2 class="text-[32px] sm:text-[36px] font-sans leading-tight bottom_scroll">
+                    My Human-Brain Based Closing Method That <span class="text-gradient font-semibold">100+ Businesses
+                        Use</span> To Turn Basic <span class="text-gradient font-semibold">Conversations Into
+                        4–5 Figure Clients</span> Every Month.
                 </h2>
-                <p class="font-inter text-[#FFFFFFCC] my-14 leading-[100%] bottom_scroll">
+                <p class="font-inter text-lg text-white my-[30px] leading-[100%] bottom_scroll">
                     If you don’t close clients, we don’t get paid. Watch the video below to see how it works.
                 </p>
 
                 <!-- Hero Video -->
-                <div class="relative mb-12 max-w-4xl mx-auto bottom_scroll">
+                <div class="relative mb-[30px] max-w-4xl mx-auto bottom_scroll">
                     <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl font-inter relative">
                         <vue-plyr class="w-full h-full">
                             <video id="hero-video" ref="heroVideo" playsinline controls preload="auto"
@@ -50,7 +51,7 @@
         <div>
 
             <!-- Testimonials Section -->
-            <section ref="testimonialsSection" class="container mx-auto py-20 px-4">
+            <section ref="testimonialsSection" class="container mx-auto pt-20 px-4">
                 <h2
                     class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-10 bottom_scroll">
                     What Our Clients Are Saying
@@ -72,7 +73,7 @@
             </section>
 
             <!-- Discovery Call Section -->
-            <section class="py-20 relative px-4 overflow-hidden">
+            <section class="relative px-4 overflow-hidden">
                 <div class="absolute -top-20 left-0 w-[100px] sm:w-[200px] h-[300px] sm:h-[700px]">
                     <img class="w-full h-full object-cover" src="/images/socrates.png" />
                 </div>
@@ -86,7 +87,7 @@
                         What You’ll Unlock With The Socratic Sales Method
                     </h2>
 
-                    <div class="grid sm:grid-cols-2 grid-cols-1 gap-2 pt-10">
+                    <div class="grid sm:grid-cols-2 grid-cols-1 gap-10 pt-10">
                         <SimpleCart v-for="(item, index) in simpleCarts" :key="index" :data="item" />
                     </div>
 
@@ -112,12 +113,12 @@
                 </div>
 
                 <h2
-                    class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-10 bottom_scroll">
+                    class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-[50px] bottom_scroll">
                     Hear From Our Clients
                 </h2>
 
                 <div class="container mx-auto">
-                    <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 pt-10">
+                    <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
                         <VideoCart v-for="(item, index) in videos" :key="index" :id="item.id" :videoSource="item.video"
                             :name="item.name" class="bottom_scroll" />
                     </div>
@@ -129,16 +130,16 @@
             </section>
 
             <!-- Community CTA -->
-            <section class="py-20 px-4">
+            <section class="px-4">
                 <BgFixed>
                     <div
-                        class="h-[500px] flex flex-col items-center justify-center space-y-10 sm:space-y-20 text-center">
+                        class="h-[500px] flex flex-col items-center justify-center space-y-6 sm:space-y-14 text-center">
                         <h2 class="text-[36px] sm:text-[56px] font-sans font-medium leading-tight bottom_scroll">
-                            Join The Free Socratic Sales Community
+                            Join The Free Socratic Sales <br>Community
                         </h2>
-                        <p class="text-[#8A8F98] max-w-[660px]">
-                            Sharpen your closing skills, learn psychology-driven sales, and connect with other business
-                            owners mastering the Socratic Method.
+                        <p class="text-white font-inter font-medium max-w-[660px]">
+                            Sharpen your closing skills, learn psychology-driven sales, and <br>
+                            connect with other business owners mastering the Socratic Method.
                         </p>
                         <Button name="Join community" @click="joinCommunity" />
                     </div>
@@ -178,10 +179,10 @@ const isHeroMuted = ref(true)
 
 const toggleHeroMute = () => {
     isHeroMuted.value = !isHeroMuted.value
-    
+
     if (heroVideo.value) {
         heroVideo.value.muted = isHeroMuted.value
-        
+
         const plyrInstance = heroVideo.value.closest('.plyr')?.plyr
         if (plyrInstance) {
             plyrInstance.muted = isHeroMuted.value
@@ -289,12 +290,12 @@ onMounted(() => {
         opacity: 0,
         reset: true
     });
-    
+
     if (heroVideo.value) {
         heroVideo.value.muted = true
         isHeroMuted.value = true
     }
-    
+
     setTimeout(() => {
         if (heroVideo.value) {
             const plyrInstance = heroVideo.value.closest('.plyr')?.plyr

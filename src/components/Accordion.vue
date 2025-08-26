@@ -12,7 +12,7 @@
                     :class="{ 'pb-4': item.isOpen }">
                     <!-- Question Text -->
                     <h3
-                        class="text-white text-lg font-inter sm:text-xl font-medium leading-relaxed pr-4 group-hover:text-gray-100 transition-colors duration-200">
+                        class="text-white text-base font-inter sm:text-lg font-medium leading-relaxed pr-4 group-hover:text-gray-100 transition-colors duration-200">
                         {{ item.question }}
                     </h3>
 
@@ -35,9 +35,9 @@
                 maxHeight: item.isOpen ? item.contentHeight + 'px' : '0px',
                 opacity: item.isOpen ? 1 : 0
             }" ref="contentRefs">
-                    <div class="px-8 pb-6 text-gray-300 text-base leading-relaxed"
+                    <div class="px-8 pb-6 text-white sm:text-base text-sm leading-relaxed"
                         :class="{ 'animate-fade-in': item.isOpen }">
-                        <div class="border-t border-gray-800/80 pt-4">
+                        <div class="border-t font-inter border-gray-800/80 pt-4">
                             {{ item.answer }}
                         </div>
                     </div>

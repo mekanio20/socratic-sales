@@ -9,7 +9,7 @@
             </video>
             <div class="relative z-10 h-full py-16 px-4 sm:px-6 lg:px-8 mt-28">
                 <h1 class="text-[40px] text-center font-medium font-sans leading-tight lg:mb-40 mb-48 bottom_scroll">
-                    Sverhu Schedule Your Socratic Call
+                    Schedule Your Socratic Call
                 </h1>
                 <section class="container mx-auto -mt-40">
                     <Calendly />
@@ -17,7 +17,8 @@
             </div>
         </div>
 
-        <div class="-mb-10">
+        <div class="mb-10">
+            <h1 class="text-[34px] text-center text-gradient font-medium font-sans mb-10">Trusted by:</h1>
             <Swiper />
         </div>
 

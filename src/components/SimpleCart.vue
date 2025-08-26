@@ -1,41 +1,36 @@
 <template>
-    <div class="bg-black flex items-center justify-center px-4 py-8 sm:py-10 bottom_scroll">
-        <div class="w-full max-w-xl transform transition-all duration-1000 ease-out"
-            :class="{ 'translate-y-4 opacity-0': !isLoaded, 'translate-y-0 opacity-100': isLoaded }">
+    <div class="bottom_scroll">
+        <article :class="{ 'translate-y-4 opacity-0': !isLoaded, 'translate-y-0 opacity-100': isLoaded }"
+            class="transform ease-out font-inter relative bg-[#0D0D0D] backdrop-blur-sm rounded-2xl border border-gray-800/50 p-6 lg:p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] hover:bg-gray-900/90 group"
+            @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
 
-            <!-- Main Card -->
-            <article
-                class="relative bg-[#0D0D0D] backdrop-blur-sm rounded-2xl border border-gray-800/50 p-6 sm:p-10 lg:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] hover:bg-gray-900/90 group"
-                @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
-
-                <!-- Icon -->
-                <div class="mb-6 sm:mb-8">
-                    <div class="w-6 h-6 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
-                        :class="{ 'animate-pulse': isHovered }">
-                        <img :src="data.icon" class="w-full h-full object-contain" />
-                    </div>
+            <!-- Icon -->
+            <div class="mb-6 sm:mb-8">
+                <div class="w-6 h-6 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
+                    :class="{ 'animate-pulse': isHovered }">
+                    <img :src="data.icon" class="w-full h-full object-contain" />
                 </div>
+            </div>
 
-                <!-- Title -->
-                <h1 class="text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-6 leading-tight tracking-tight">
-                    <span class="inline-block transform transition-all duration-500 hover:scale-105"
-                        :class="{ 'animate-fade-in-up': isLoaded }" :style="{ animationDelay: '200ms' }">
-                        {{ data.name }}
-                    </span>
-                </h1>
+            <!-- Title -->
+            <h1 class="text-white text-[20px] lg:text-[24px] font-medium mb-6 leading-tight tracking-tight">
+                <span class="inline-block transform transition-all duration-500 hover:scale-105"
+                    :class="{ 'animate-fade-in-up': isLoaded }" :style="{ animationDelay: '200ms' }">
+                    {{ data.name }}
+                </span>
+            </h1>
 
-                <!-- Description -->
-                <p class="text-[#8A8F98] text-sm sm:text-base md:text-lg transform transition-all duration-700"
-                    :class="{ 'animate-fade-in-up': isLoaded }" :style="{ animationDelay: '800ms' }">
-                    {{ data.desc }}
-                </p>
+            <!-- Description -->
+            <p class="text-[#8A8F98] text-sm md:text-base transform transition-all duration-700"
+                :class="{ 'animate-fade-in-up': isLoaded }" :style="{ animationDelay: '800ms' }">
+                {{ data.desc }}
+            </p>
 
-                <!-- Hover Effect Overlay -->
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-500/5 to-transparent opacity-0 transition-opacity duration-500 pointer-events-none"
-                    :class="{ 'opacity-100': isHovered }">
-                </div>
-            </article>
-        </div>
+            <!-- Hover Effect Overlay -->
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-500/5 to-transparent opacity-0 transition-opacity duration-500 pointer-events-none"
+                :class="{ 'opacity-100': isHovered }">
+            </div>
+        </article>
     </div>
 </template>
 

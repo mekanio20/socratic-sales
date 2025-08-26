@@ -17,37 +17,32 @@
             </div> -->
 
             <!-- Testimonials Swiper -->
-            <div class="testimonial-swiper-container relative bottom_scroll">
-                <swiper :modules="modules" :slides-per-view="1" :space-between="30" :loop="true"
-                    :autoplay="{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }" :breakpoints="{
-                        640: { slidesPerView: 1, spaceBetween: 30 },
-                        700: { slidesPerView: 2, spaceBetween: 30 },
-                        1024: { slidesPerView: 3, spaceBetween: 40 },
-                        1280: { slidesPerView: 3, spaceBetween: 50 },
-                    }" class="testimonial-swiper" @swiper="onSwiper" @slide-change="onSlideChange">
+            <div class="relative bottom_scroll">
+                <swiper :modules="modules" :slides-per-view="3" :space-between="30" :loop="true"
+                    :loop-additional-slides="3" :autoplay="{
+                    delay: 1000,
+                    disableOnInteraction: false,
+                }" :breakpoints="{
+                    640: { slidesPerView: 1, spaceBetween: 30 },
+                    700: { slidesPerView: 2, spaceBetween: 30 },
+                    1024: { slidesPerView: 3, spaceBetween: 40 },
+                    1280: { slidesPerView: 3, spaceBetween: 50 },
+                }" class="testimonial-swiper" @swiper="onSwiper" @slide-change="onSlideChange">
                     <swiper-slide v-for="(testimonial, index) in testimonials" :key="index" class="h-auto">
-                        <div class="testimonial-card bg-[#0D0D0D] backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 h-full flex flex-col transition-all duration-500 hover:bg-[#0D0D0D] hover:border-[#FFB433] hover:transform hover:scale-105"
+                        <div class="testimonial-card bg-[#0D0D0D] backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 h-full flex flex-col transition-all duration-500 hover:bg-[#0D0D0D] hover:border-[#FFB433]"
                             :class="{ 'featured-card': testimonial.featured }">
                             <!-- Quote -->
                             <div class="flex-1 mb-8">
-                                <blockquote class="text-white text-lg leading-relaxed">
-                                    "{{ testimonial.quote }}"
+                                <blockquote class="text-white text-[20px] font-medium leading-relaxed">
+                                    {{ testimonial.quote }}
                                 </blockquote>
                             </div>
 
                             <!-- Author -->
                             <div class="flex items-center space-x-4 mt-auto">
-                                <!-- <div
-                                    class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-700">
-                                    <img :src="testimonial.author.avatar" :alt="testimonial.author.name"
-                                        class="w-full h-full object-cover" loading="lazy" />
-                                </div> -->
-                                <div>
-                                    <h4 class="text-gradient font-semibold text-base">{{ testimonial.author.name }}</h4>
-                                    <p class="text-gray-400 text-sm">{{ testimonial.author.title }}</p>
+                                <div class="space-y-2">
+                                    <h4 class="text-gradient font-inter font-semibold text-lg">{{ testimonial.author.name }}</h4>
+                                    <p class="text-white text-sm">{{ testimonial.author.title }}</p>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +105,38 @@ const testimonials = ref([
             avatar: "/images/person-3.png"
         },
         featured: false
-    }
+    },
+    {
+        id: 4,
+        quote: "“It’s the best decision that we’ve done as a company in our field. It’s been 2 weeks since I started with Arslan and we’ve actually booked over $26.000 in 2 weeks, our revenue has bumped up dramatically.”",
+        author: {
+            name: "Patrice Mougeot",
+            title: "Co-Founder of Moojo Autospa",
+            avatar: "/images/person-1.png"
+        },
+        featured: false
+    },
+    {
+        id: 5,
+        quote: "“It’s cutting maybe even years out of your trial and errors. He’s provided all the information and knowledge that I need to move forward, to just sit there and go through it bit by bit.”",
+        author: {
+            name: "Katherine Jones",
+            title: "Founder of Green Volts Media",
+            avatar: "/images/person-2.png"
+        },
+        featured: false
+    },
+    {
+        id: 6,
+        quote: '"I gotta say, it\'s the best decision I have ever made. Recently in the past 2 weeks I\'ve actually collected $ 5.500 for my first 2 clients. None of that would be possible without Arslan. Eternally grateful!"',
+        author: {
+            name: "Michael DiBari",
+            title: "Founder of Dicohr Marketing",
+            avatar: "/images/person-3.png"
+        },
+        featured: false
+    },
+
 ])
 
 const handleAvatarClick = (avatarId) => {

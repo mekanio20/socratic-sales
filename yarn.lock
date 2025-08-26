@@ -1000,13 +1000,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.6":
-  version: 2.5.1
-  resolution: "classnames@npm:2.5.1"
-  checksum: 10c0/afff4f77e62cea2d79c39962980bf316bacb0d7c49e13a21adaadb9221e1c6b9d3cdb829d8bb1b23c406f4e740507f37e1dcf506f7e3b7113d17c5bab787aa69
-  languageName: node
-  linkType: hard
-
 "color-convert@npm:^2.0.1":
   version: 2.0.1
   resolution: "color-convert@npm:2.0.1"
@@ -1101,13 +1094,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debounce@npm:^1.2.0":
-  version: 1.2.1
-  resolution: "debounce@npm:1.2.1"
-  checksum: 10c0/6c9320aa0973fc42050814621a7a8a78146c1975799b5b3cc1becf1f77ba9a5aa583987884230da0842a03f385def452fad5d60db97c3d1c8b824e38a8edf500
-  languageName: node
-  linkType: hard
-
 "debug@npm:4, debug@npm:^4.3.4, debug@npm:^4.4.1":
   version: 4.4.1
   resolution: "debug@npm:4.4.1"
@@ -1159,13 +1145,6 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 10c0/26f364ebcdb6395f95124fda411f63137a4bfb5d3a06453f7f23dfe52502905bd84e0488172e0f9ec295fdc45f05c23d5d91baf16bd26f0fe9acd777a188dc39
-  languageName: node
-  linkType: hard
-
-"easy-bem@npm:^1.0.2":
-  version: 1.1.1
-  resolution: "easy-bem@npm:1.1.1"
-  checksum: 10c0/83b54e5c854795612a245fba9bc48053da3593205ff19d8aad38ef9bc0cbf56d2df7af73d90b533602696ead1ffe6beef55d756e2356e981f50156e044a1463e
   languageName: node
   linkType: hard
 
@@ -2655,7 +2634,7 @@ __metadata:
     unplugin-vue-components: "npm:^28.8.0"
     vite: "npm:^7.0.4"
     vue: "npm:^3.5.17"
-    vue-advanced-cropper: "npm:^2.8.9"
+    vue-gtag-next: "npm:^1.14.0"
     vue-plyr: "npm:^7.0.0"
     vue-router: "npm:^4.5.1"
   languageName: unknown
@@ -3167,16 +3146,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-advanced-cropper@npm:^2.8.9":
-  version: 2.8.9
-  resolution: "vue-advanced-cropper@npm:2.8.9"
-  dependencies:
-    classnames: "npm:^2.2.6"
-    debounce: "npm:^1.2.0"
-    easy-bem: "npm:^1.0.2"
+"vue-gtag-next@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "vue-gtag-next@npm:1.14.0"
   peerDependencies:
-    vue: ^3.0.0
-  checksum: 10c0/c5b5d769ad6c8d1d14de7a425d0774bf63d971c3f9c576c8b2d8f85d1796208ccff605cdc58fbfeff88d1c4b2fe2bf29066eff191982f3b11d9f1453df3d2ec0
+    vue: ^3.0.0-rc.11
+  checksum: 10c0/46ce80ff652fcf34f383c091024e90f7d2565102490075ebb47836fb706baa8ef6f1b97d32d9d1b950230cb1f45d0c109d117295e21ec847159da73abd25ed73
   languageName: node
   linkType: hard
 
