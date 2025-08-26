@@ -66,7 +66,7 @@
             <!-- Calendly -->
             <section class="container mx-auto py-20 px-4">
                 <h2
-                    class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight mb-10 bottom_scroll">
+                    class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight bottom_scroll">
                     Schedule Your Socratic Call
                 </h2>
                 <Calendly />
@@ -98,7 +98,7 @@
             </section>
 
             <!-- Results Section -->
-            <section class="py-20 relative px-4 overflow-hidden">
+            <section class="pt-[100px] pb-20 relative px-4 overflow-hidden">
                 <div class="absolute left-0 w-[60px] sm:w-[100px] h-[120px] sm:h-[200px]">
                     <img class="w-full h-full object-cover" src="/images/mask.png" />
                 </div>
@@ -155,7 +155,7 @@
 
                 <Accordion />
 
-                <div class="flex items-center justify-center pt-14">
+                <div class="flex items-center justify-center pt-[50px]">
                     <Button name="Apply now" @click="handleClick" />
                 </div>
             </section>
