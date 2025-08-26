@@ -18,9 +18,9 @@
 
             <!-- Testimonials Swiper -->
             <div class="relative bottom_scroll">
-                <swiper :modules="modules" :slides-per-view="3" :space-between="30" :loop="true"
+                <swiper :modules="modules" :space-between="30" :loop="true"
                     :loop-additional-slides="3" :autoplay="{
-                    delay: 1000,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }" :breakpoints="{
                     640: { slidesPerView: 1, spaceBetween: 30 },
@@ -33,7 +33,7 @@
                             :class="{ 'featured-card': testimonial.featured }">
                             <!-- Quote -->
                             <div class="flex-1 mb-8">
-                                <blockquote class="text-white text-[20px] font-medium leading-relaxed">
+                                <blockquote class="text-white sm:text-[20px] text-base font-medium leading-relaxed">
                                     {{ testimonial.quote }}
                                 </blockquote>
                             </div>
@@ -41,8 +41,8 @@
                             <!-- Author -->
                             <div class="flex items-center space-x-4 mt-auto">
                                 <div class="space-y-2">
-                                    <h4 class="text-gradient font-inter font-semibold text-lg">{{ testimonial.author.name }}</h4>
-                                    <p class="text-white text-sm">{{ testimonial.author.title }}</p>
+                                    <h4 class="text-gradient font-inter font-semibold sm:text-lg text-base">{{ testimonial.author.name }}</h4>
+                                    <p class="text-white sm:text-sm text-xs">{{ testimonial.author.title }}</p>
                                 </div>
                             </div>
                         </div>

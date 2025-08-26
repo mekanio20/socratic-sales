@@ -17,8 +17,8 @@
             </div>
         </div>
 
-        <div class="mb-10">
-            <h1 class="text-[34px] text-center text-gradient font-medium font-sans mb-10">Trusted by:</h1>
+        <div class="">
+            <h1 class="text-[34px] text-center text-gradient font-medium font-sans sm:mb-10">Trusted by:</h1>
             <Swiper />
         </div>
 

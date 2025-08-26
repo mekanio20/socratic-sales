@@ -2,18 +2,23 @@
     <div class="p-5 rounded-[20px] bg-[#0D0D0D] flex flex-col space-y-1">
         <div class="relative h-[400px] sm:h-[500px] rounded-2xl group cursor-pointer font-inter"
              @mouseenter="isHovered = true" @mouseleave="isHovered = false">
-            <vue-plyr :options="{ controls: true, muted: false }" class="w-full h-full">
-                <video :id="`video-${id}`" playsinline preload="auto" class="w-full h-full object-cover cursor-pointer rounded-sm">
+            <vue-plyr :options="{
+                controls: [],
+                clickToPlay: true,
+                hideControls: true,
+                resetOnEnd: true
+            }" class="w-full h-full">
+                <video :id="`video-${id}`" playsinline webkit-playsinline preload="metadata" :poster="poster" class="w-full h-full object-cover cursor-pointer rounded-sm">
                     <source :src="videoSource" type="video/mp4" />
                 </video>
             </vue-plyr>
             <button v-if="isHovered" @click.stop="togglePlay"
                 class="absolute inset-0 flex items-center justify-center text-white text-5xl bg-black/30 hover:bg-black/50 transition">
-                <img v-if="!isPlaying" class="w-[60px] h-[60px]" src="/icons/play.png" />
-                <img v-else class="w-[60px] h-[60px]" src="/icons/pause.png" />
+                <img v-if="!isPlaying" class="w-[60px] h-[60px]" src="/icons/play.webp" />
+                <img v-else class="w-[60px] h-[60px]" src="/icons/pause.webp" />
             </button>
         </div>
-        <h3 class="text-gradient font-sf_pro font-semibold text-[22px] pt-4 text-black">
+        <h3 class="text-gradient font-sf_pro font-semibold sm:text-[22px] text-[18px] pt-4 text-black">
             {{ name }}
         </h3>
         <p class="font-sf_pro text-base text-white">
@@ -31,6 +36,15 @@ onMounted(() => {
     video.value = document.querySelector(`#video-${props.id}`)
     if (video.value) {
         video.value.muted = false
+        // On iOS Safari, ensure poster shows by pausing immediately after metadata is ready
+        const showPoster = () => {
+            // If autoplay policies started playback, pause to show poster
+            if (!video.value) return
+            if (!video.value.paused) {
+                video.value.pause()
+            }
+        }
+        video.value.addEventListener('loadedmetadata', showPoster, { once: true })
 
         // Keep local state in sync with actual video events
         video.value.addEventListener('playing', onVideoPlaying)
@@ -91,6 +105,10 @@ const props = defineProps({
     videoSource: {
         type: String,
         default: '/videos/bg.mp4'
+    },
+    poster: {
+        type: String,
+        default: '/images/socrates.png'
     },
     hls_master: {
         type: String,

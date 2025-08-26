@@ -59,7 +59,7 @@
 
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                     <VideoCart v-for="(item, index) in testimonials" :key="index" :id="item.id"
-                        :videoSource="item.video" :name="item.name" :desc="item.desc" class="bottom_scroll" />
+                        :videoSource="item.video" :poster="item.poster" :name="item.name" :desc="item.desc" class="bottom_scroll" />
                 </div>
             </section>
 
@@ -119,7 +119,7 @@
 
                 <div class="container mx-auto">
                     <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
-                        <VideoCart v-for="(item, index) in videos" :key="index" :id="item.id" :videoSource="item.video"
+                        <VideoCart v-for="(item, index) in videos" :key="index" :id="item.id" :videoSource="item.video" :poster="item.poster"
                             :name="item.name" class="bottom_scroll" />
                     </div>
 
@@ -137,7 +137,7 @@
                         <h2 class="text-[36px] sm:text-[56px] font-sans font-medium leading-tight bottom_scroll">
                             Join The Free Socratic Sales <br>Community
                         </h2>
-                        <p class="text-white font-inter font-medium max-w-[660px]">
+                        <p class="text-white font-inter sm:text-base text-sm font-medium max-w-[660px]">
                             Sharpen your closing skills, learn psychology-driven sales, and <br>
                             connect with other business owners mastering the Socratic Method.
                         </p>
@@ -155,7 +155,7 @@
 
                 <Accordion />
 
-                <div class="flex items-center justify-center pt-[50px]">
+                <div class="flex items-center justify-center pt-[50px] container mx-auto px-4 sm:px-0">
                     <Button name="Apply now" @click="handleClick" />
                 </div>
             </section>
@@ -194,18 +194,21 @@ const testimonials = ref([
     {
         id: 1,
         video: '/3/1.mp4',
+        poster: '/3/1.webp',
         name: 'Patrice Mougeot',
         desc: 'Co-Founder of Moojo Autospa'
     },
     {
         id: 2,
         video: '/3/2.mp4',
+        poster: '/3/2.webp',
         name: 'Katherine Jones',
         desc: 'Founder of Green Volts Media'
     },
     {
         id: 3,
         video: '/3/3.mp4',
+        poster: '/3/3.webp',
         name: 'Michael DiBari',
         desc: 'Founder of Dicohr Marketing'
     }
@@ -215,31 +218,37 @@ const videos = ref([
     {
         id: 4,
         video: '/6/1.mp4',
+        poster: '/6/1.webp',
         name: 'Goce Spiroski'
     },
     {
         id: 5,
         video: '/6/2.mp4',
+        poster: '/6/2.webp',
         name: 'Aiden Oosahwe'
     },
     {
         id: 6,
         video: '/6/3.mp4',
+        poster: '/6/3.webp',
         name: 'Marius Bernard'
     },
     {
         id: 7,
         video: '/6/4.mp4',
+        poster: '/6/4.webp',
         name: 'Noah Christopher'
     },
     {
         id: 8,
         video: '/6/5.mp4',
+        poster: '/6/5.webp',
         name: 'Mitchell Parrish'
     },
     {
         id: 9,
         video: '/6/6.mp4',
+        poster: '/6/6.webp',
         name: 'Emil Delster'
     }
 ])
