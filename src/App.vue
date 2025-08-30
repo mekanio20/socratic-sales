@@ -1,5 +1,20 @@
 <template>
   <main class="w-full h-full">
-      <router-view />
+    <Loading v-if="loading" />
+    <router-view />
   </main>
 </template>
+
+<script setup>
+import router from './router/index'
+const loading = ref(false)
+onMounted(() => {
+  router.beforeEach((to, from, next) => {
+    loading.value = true
+    next()
+  })
+  router.afterEach(() => {
+    setTimeout(() => { loading.value = false }, 400)
+  })
+})
+</script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-black text-white overflow-x-hidden">
+    <div class="min-h-screen bg-black text-white overflow-x-hidden mt-[70px]">
         <!-- Header -->
         <Header />
 

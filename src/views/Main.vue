@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-black text-white overflow-x-hidden">
+    <div class="min-h-screen bg-black text-white overflow-x-hidden mt-[70px]">
         <!-- Header -->
         <Header />
 
@@ -21,7 +21,7 @@
             <!-- Hero Section -->
             <section ref="heroSection" class="max-w-[1000px] mx-auto px-4 text-center">
                 <h2 class="text-[32px] sm:text-[36px] font-sans leading-tight bottom_scroll">
-                    My Human-Brain Based Closing Method That <span class="text-gradient font-semibold">100+ Businesses
+                    Steal My Human-Brain Based Closing Method That <span class="text-gradient font-semibold">100+ Businesses
                         Use</span> To Turn Basic <span class="text-gradient font-semibold">Conversations Into
                         4–5 Figure Clients</span> Every Month.
                 </h2>
@@ -74,10 +74,10 @@
 
             <!-- Discovery Call Section -->
             <section class="relative px-4 overflow-hidden">
-                <div class="absolute -top-20 left-0 w-[100px] sm:w-[200px] h-[300px] sm:h-[700px]">
+                <div class="absolute -top-20 left-0 w-[200px] h-[700px]">
                     <img class="w-full h-full object-cover" src="/images/socrates.png" />
                 </div>
-                <div class="absolute -top-20 right-0 w-[100px] sm:w-[200px] h-[300px] sm:h-[700px]">
+                <div class="absolute -top-20 right-0 w-[200px] h-[700px]">
                     <img class="w-full h-full object-cover scale-x-[-1]" src="/images/socrates.png" />
                 </div>
 
@@ -133,8 +133,8 @@
             <section class="px-4">
                 <BgFixed>
                     <div
-                        class="h-[500px] flex flex-col items-center justify-center space-y-6 sm:space-y-14 text-center">
-                        <h2 class="text-[36px] sm:text-[56px] font-sans font-medium leading-tight bottom_scroll">
+                        class="h-[500px] flex flex-col items-center justify-center space-y-20 sm:space-y-14 text-center">
+                        <h2 class="text-[28px] sm:text-[56px] font-sans font-medium leading-tight bottom_scroll">
                             Join The Free Socratic Sales <br>Community
                         </h2>
                         <p class="text-white font-inter sm:text-base text-sm font-medium max-w-[660px]">

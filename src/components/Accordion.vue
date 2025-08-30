@@ -64,7 +64,7 @@ const accordionItems = ref([
     },
     {
         question: "Can I get personal coaching or mentorship?",
-        answer: "Yes. You get one on one coaching and WhatsApp access so you always know what to say and how to close.",
+        answer: "Yes. You get one-on-one coaching and personalized WhatsApp access, so you basically have direct access to our brains whenever you need guidance.",
         isOpen: false,
         contentHeight: 0
     },

@@ -1,6 +1,6 @@
 <template>
-    <header class="relative z-50">
-        <nav class="border-b border-[#4F4F4F] bg-black px-4 py-3 bottom_scroll">
+    <header class="fixed top-0 right-0 left-0 z-40">
+        <nav class="border-b border-[#4F4F4F] bg-black px-4 py-3">
             <!-- Logo & Title Container -->
             <div class="flex justify-center items-center">
                 <!-- Logo -->
