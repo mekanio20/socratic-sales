@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://socraticsales.io/sitemap.xml
