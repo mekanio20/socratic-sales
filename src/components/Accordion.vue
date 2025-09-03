@@ -12,7 +12,7 @@
                     :class="{ 'pb-4': item.isOpen }">
                     <!-- Question Text -->
                     <h3
-                        class="text-white text-base font-inter sm:text-lg font-medium leading-relaxed pr-4 group-hover:text-gray-100 transition-colors duration-200">
+                        class="text-white text-sm font-inter sm:text-lg font-medium leading-relaxed pr-4 group-hover:text-gray-100 transition-colors duration-200">
                         {{ item.question }}
                     </h3>
 

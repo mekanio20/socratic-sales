@@ -66,7 +66,7 @@
             <!-- Calendly -->
             <section class="container mx-auto py-20 px-4">
                 <h2
-                    class="text-[36px] sm:text-[56px] font-sans font-medium text-center leading-tight bottom_scroll">
+                    class="text-[36px] sm:text-[56px] sm:mb-0 mb-12 font-sans font-medium text-center leading-tight bottom_scroll">
                     Schedule Your Socratic Call
                 </h2>
                 <Calendly />
@@ -133,12 +133,12 @@
             <section class="px-4">
                 <BgFixed>
                     <div
-                        class="h-[500px] flex flex-col items-center justify-center space-y-20 sm:space-y-14 text-center">
+                        class="h-[500px] flex flex-col items-center justify-center space-y-10 sm:space-y-14 text-center">
                         <h2 class="text-[28px] sm:text-[56px] font-sans font-medium leading-tight bottom_scroll">
-                            Join The Free Socratic Sales <br>Community
+                            Join The Free Socratic Sales Community
                         </h2>
                         <p class="text-white font-inter sm:text-base text-sm font-medium max-w-[660px]">
-                            Sharpen your closing skills, learn psychology-driven sales, and <br>
+                            Sharpen your closing skills, learn psychology-driven sales, and
                             connect with other business owners mastering the Socratic Method.
                         </p>
                         <Button name="Join community" @click="joinCommunity" />
