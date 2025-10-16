@@ -27,7 +27,7 @@
                         4–5 Figure Clients</span> Every Month.
                 </h2>
                 <p class="font-inter text-lg text-white my-[30px] leading-[100%] bottom_scroll">
-                    If you don’t close clients, we don’t get paid. Watch the video below to see how it works.
+                    Watch the video below to see how it works.
                 </p>
 
                 <!-- Hero Video -->
@@ -36,8 +36,8 @@
 
                         <!-- Plyr Video Player -->
                         <vue-plyr class="absolute inset-0 w-full h-full" :options="plyrOptions">
-                            <video id="hero-video" ref="heroVideo" playsinline webkit-playsinline x5-playsinline autoplay
-                                controls preload="auto" class="w-full h-full object-contain"
+                            <video id="hero-video" ref="heroVideo" playsinline webkit-playsinline x5-playsinline
+                                autoplay controls preload="auto" class="w-full h-full object-contain"
                                 :muted="isHeroMuted" @loadedmetadata="onVideoLoaded">
                                 <source src="/3/main.mp4" type="video/mp4" />
                                 Your browser does not support the video element.
@@ -72,10 +72,14 @@
 
             <!-- Calendly -->
             <section class="container mx-auto py-20 px-4">
-                <h2
-                    class="text-[36px] sm:text-[56px] sm:mb-0 mb-16 font-sans font-medium text-center leading-tight bottom_scroll">
-                    Schedule Your Socratic Call
-                </h2>
+                <div class="flex sm:flex-row sm:space-x-4 flex-col items-center justify-center sm:mb-0 mb-16">
+                    <h1 class="text-[40px] text-center font-medium font-sans leading-tight bottom_scroll">
+                        Schedule Your
+                    </h1>
+                    <h1 class="text-[40px] text-center font-medium font-sans leading-tight bottom_scroll">
+                        Socratic Call
+                    </h1>
+                </div>
                 <Calendly />
             </section>
 
@@ -191,9 +195,9 @@ const plyrOptions = {
     clickToPlay: true,
     hideControls: false,
     resetOnEnd: true,
-    fullscreen: { 
-        enabled: true, 
-        fallback: true, 
+    fullscreen: {
+        enabled: true,
+        fallback: true,
         iosNative: true,
         container: null
     },
@@ -210,7 +214,7 @@ const toggleHeroMute = () => {
 
     if (heroVideo.value) {
         heroVideo.value.muted = isHeroMuted.value
-        
+
         // Plyr instance'a da uygula
         const plyrInstance = heroVideo.value.closest('.plyr')?.plyr
         if (plyrInstance) {
@@ -237,18 +241,18 @@ onMounted(() => {
     if (heroVideo.value) {
         heroVideo.value.muted = true
         isHeroMuted.value = true
-        
+
         // Plyr yüklendikten sonra ayarları uygula
         setTimeout(() => {
             const plyrInstance = heroVideo.value?.closest('.plyr')?.plyr
             if (plyrInstance) {
                 plyrInstance.muted = true
-                
+
                 // Video başlatıldığında custom mute button'u gizle
                 plyrInstance.on('play', () => {
                     videoStarted.value = true
                 })
-                
+
                 // Fullscreen olaylarını dinle
                 plyrInstance.on('enterfullscreen', () => {
                     // iOS Safari'de object-fit ayarını koru
