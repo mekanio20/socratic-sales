@@ -8,7 +8,7 @@
                 <source src="/videos/bg.mp4" type="video/mp4" />
             </video>
             <div class="relative z-10 h-full py-16 px-4 sm:px-6 lg:px-8 mt-28">
-                <h1 class="sm:text-[40px] text-[28px] text-center font-medium font-sans leading-tight lg:mb-40 mb-52 bottom_scroll">
+                <h1 class="sm:text-[40px] text-[28px] text-center font-medium font-sans leading-tight lg:mb-40 mb-60 bottom_scroll">
                     Schedule Your Socratic Call
                 </h1>
                 <section class="container mx-auto -mt-40">

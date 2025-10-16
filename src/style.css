@@ -33,6 +33,24 @@
 }
 
 @layer base {
+  /* Ensure video is fully visible in fullscreen on mobile/iOS */
+  video:fullscreen,
+  video:-webkit-full-screen,
+  .plyr--fullscreen .plyr__video-wrapper video {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #000;
+  }
+  .plyr--fullscreen .plyr__video-wrapper,
+  .plyr--fullscreen .plyr__poster {
+    background-color: #000 !important;
+  }
+  .plyr--fullscreen .plyr__poster {
+    object-fit: contain !important;
+    background-size: contain !important;
+    background-position: center center !important;
+  }
   :root {
     --plyr-color-main: #feb433;
     --plyr-video-control-background: #111;

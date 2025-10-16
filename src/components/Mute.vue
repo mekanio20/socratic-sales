@@ -23,6 +23,10 @@ const unmute = () => {
    if (video) {
       video.muted = false
       video.volume = 1
+      const playPromise = video.play?.()
+      if (playPromise && typeof playPromise.then === 'function') {
+         playPromise.catch(() => {})
+      }
    }
    show.value = false
    emit('click')

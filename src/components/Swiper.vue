@@ -19,7 +19,7 @@
             <!-- Testimonials Swiper -->
             <div class="relative bottom_scroll">
                 <swiper :modules="modules" :space-between="30"
-                    :loop-additional-slides="3" :autoplay="{
+                    :loop="true" :autoplay="{
                     delay: 3000,
                     disableOnInteraction: false,
                 }" :breakpoints="{

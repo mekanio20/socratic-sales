@@ -1,6 +1,6 @@
 <template>
   <main class="w-full h-full">
-    <Loading v-if="loading" />
+    <Loading v-if="true" />
     <router-view />
   </main>
 </template>

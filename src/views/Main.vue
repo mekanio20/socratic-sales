@@ -21,7 +21,8 @@
             <!-- Hero Section -->
             <section ref="heroSection" class="max-w-[1000px] mx-auto px-4 text-center">
                 <h2 class="text-[32px] sm:text-[36px] font-sans leading-tight bottom_scroll">
-                    Steal My Human-Brain Based Closing Method That <span class="text-gradient font-semibold">100+ Businesses
+                    Steal My Human-Brain Based Closing Method That <span class="text-gradient font-semibold">100+
+                        Businesses
                         Use</span> To Turn Basic <span class="text-gradient font-semibold">Conversations Into
                         4–5 Figure Clients</span> Every Month.
                 </h2>
@@ -31,15 +32,20 @@
 
                 <!-- Hero Video -->
                 <div class="relative mb-[30px] max-w-4xl mx-auto bottom_scroll">
-                    <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl font-inter relative">
-                        <vue-plyr class="w-full h-full">
-                            <video id="hero-video" ref="heroVideo" playsinline controls preload="auto"
-                                class="w-full h-full object-cover" :muted="isHeroMuted" autoplay>
+                    <div class="relative w-full bg-gray-900 rounded-lg overflow-hidden font-inter">
+
+                        <!-- Plyr Video Player -->
+                        <vue-plyr class="absolute inset-0 w-full h-full" :options="plyrOptions">
+                            <video id="hero-video" ref="heroVideo" playsinline webkit-playsinline x5-playsinline autoplay
+                                controls preload="auto" class="w-full h-full object-contain"
+                                :muted="isHeroMuted" @loadedmetadata="onVideoLoaded">
                                 <source src="/3/main.mp4" type="video/mp4" />
                                 Your browser does not support the video element.
                             </video>
                         </vue-plyr>
-                        <Mute class="sm:w-[40%] w-[35%]" v-if="isHeroMuted" @click="toggleHeroMute" />
+
+                        <!-- Custom Mute Button -->
+                        <Mute v-if="isHeroMuted" class="sm:w-[40%] w-[35%]" @click="toggleHeroMute" />
                     </div>
                 </div>
 
@@ -59,14 +65,15 @@
 
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                     <VideoCart v-for="(item, index) in testimonials" :key="index" :id="item.id"
-                        :videoSource="item.video" :poster="item.poster" :name="item.name" :desc="item.desc" class="bottom_scroll" />
+                        :videoSource="item.video" :poster="item.poster" :name="item.name" :desc="item.desc"
+                        class="bottom_scroll" />
                 </div>
             </section>
 
             <!-- Calendly -->
             <section class="container mx-auto py-20 px-4">
                 <h2
-                    class="text-[36px] sm:text-[56px] sm:mb-0 mb-12 font-sans font-medium text-center leading-tight bottom_scroll">
+                    class="text-[36px] sm:text-[56px] sm:mb-0 mb-16 font-sans font-medium text-center leading-tight bottom_scroll">
                     Schedule Your Socratic Call
                 </h2>
                 <Calendly />
@@ -119,8 +126,8 @@
 
                 <div class="container mx-auto">
                     <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
-                        <VideoCart v-for="(item, index) in videos" :key="index" :id="item.id" :videoSource="item.video" :poster="item.poster"
-                            :name="item.name" class="bottom_scroll" />
+                        <VideoCart v-for="(item, index) in videos" :key="index" :id="item.id" :videoSource="item.video"
+                            :poster="item.poster" :name="item.name" class="bottom_scroll" />
                     </div>
 
                     <div class="flex items-center justify-center pt-14">
@@ -167,8 +174,8 @@
 </template>
 
 <script setup>
-import ScrollReveal from 'scrollreveal'
 import { ref, onMounted } from 'vue'
+import ScrollReveal from 'scrollreveal'
 const router = useRouter()
 // Reactive refs
 const heroSection = ref(null)
@@ -176,19 +183,83 @@ const testimonialsSection = ref(null)
 
 const heroVideo = ref(null)
 const isHeroMuted = ref(true)
+const videoStarted = ref(false)
+
+// Plyr options - Mobil uyumlu ayarlar
+const plyrOptions = {
+    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+    clickToPlay: true,
+    hideControls: false,
+    resetOnEnd: true,
+    fullscreen: { 
+        enabled: true, 
+        fallback: true, 
+        iosNative: true,
+        container: null
+    },
+    ratio: '16:9',
+    storage: { enabled: false },
+    muted: true,
+    playsinline: true,
+    autopause: true
+}
 
 const toggleHeroMute = () => {
     isHeroMuted.value = !isHeroMuted.value
+    videoStarted.value = true
 
     if (heroVideo.value) {
         heroVideo.value.muted = isHeroMuted.value
-
+        
+        // Plyr instance'a da uygula
         const plyrInstance = heroVideo.value.closest('.plyr')?.plyr
         if (plyrInstance) {
             plyrInstance.muted = isHeroMuted.value
+            // Unmute edildiğinde video'yu başlat
+            if (!isHeroMuted.value && plyrInstance.paused) {
+                plyrInstance.play().catch(err => {
+                    console.log('Autoplay prevented:', err)
+                })
+            }
         }
     }
 }
+
+const onVideoLoaded = () => {
+    if (heroVideo.value) {
+        heroVideo.value.muted = true
+        isHeroMuted.value = true
+    }
+}
+
+onMounted(() => {
+    // Video element hazır olduğunda
+    if (heroVideo.value) {
+        heroVideo.value.muted = true
+        isHeroMuted.value = true
+        
+        // Plyr yüklendikten sonra ayarları uygula
+        setTimeout(() => {
+            const plyrInstance = heroVideo.value?.closest('.plyr')?.plyr
+            if (plyrInstance) {
+                plyrInstance.muted = true
+                
+                // Video başlatıldığında custom mute button'u gizle
+                plyrInstance.on('play', () => {
+                    videoStarted.value = true
+                })
+                
+                // Fullscreen olaylarını dinle
+                plyrInstance.on('enterfullscreen', () => {
+                    // iOS Safari'de object-fit ayarını koru
+                    if (heroVideo.value) {
+                        heroVideo.value.style.objectFit = 'contain'
+                    }
+                })
+            }
+        }, 100)
+    }
+})
 
 const testimonials = ref([
     {
@@ -315,3 +386,67 @@ onMounted(() => {
     }, 200)
 })
 </script>
+
+<style scoped>
+/* Plyr özelleştirmeleri */
+:deep(.plyr) {
+    width: 100%;
+    height: 100%;
+}
+
+:deep(.plyr__video-wrapper) {
+    background: #000;
+}
+
+:deep(.plyr video) {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Mobil cihazlarda play button'un daha görünür olması için */
+:deep(.plyr__control--overlaid) {
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 1.5rem !important;
+}
+
+:deep(.plyr__control--overlaid:hover) {
+    background: rgba(255, 255, 255, 1) !important;
+}
+
+:deep(.plyr__control--overlaid svg) {
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+/* Fullscreen modunda video'nun doğru görünmesi */
+:deep(.plyr--fullscreen video) {
+    object-fit: contain !important;
+    max-height: 100vh !important;
+}
+
+/* iOS Safari için özel düzeltmeler */
+@supports (-webkit-touch-callout: none) {
+    :deep(.plyr video) {
+        object-fit: contain !important;
+        -webkit-object-fit: contain !important;
+    }
+
+    :deep(.plyr--fullscreen video) {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/* Android için */
+@media screen and (max-width: 768px) {
+    :deep(.plyr__control--overlaid) {
+        padding: 2rem !important;
+    }
+
+    :deep(.plyr__control--overlaid svg) {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+}
+</style>
